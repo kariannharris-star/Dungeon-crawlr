@@ -1,0 +1,770 @@
+{
+  "items": [
+    {
+      "id": "health_potion",
+      "name": "Health Potion",
+      "description": "A small vial of ruby-red liquid that glows faintly with restorative magic. The glass is warm to the touch, and the liquid swirls on its own as if alive.",
+      "item_type": "consumable",
+      "effect_type": "heal",
+      "effect_value": 30,
+      "value": 15,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "greater_health_potion",
+      "name": "Greater Health Potion",
+      "description": "A large crystal flask containing a deep crimson elixir. Golden flecks drift through the liquid like stars, and it pulses with powerful healing energy.",
+      "item_type": "consumable",
+      "effect_type": "heal",
+      "effect_value": 75,
+      "value": 40,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "supreme_health_potion",
+      "name": "Supreme Health Potion",
+      "description": "An ornate bottle of legendary healing draught, brewed by ancient alchemists. A single drop could mend shattered bones.",
+      "item_type": "consumable",
+      "effect_type": "heal",
+      "effect_value": 150,
+      "value": 100,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "antidote",
+      "name": "Antidote",
+      "description": "A bitter herbal remedy in a green glass vial. The acrid smell alone makes your eyes water, but it will purge any poison from your veins.",
+      "item_type": "consumable",
+      "effect_type": "cure",
+      "effect_value": 0,
+      "value": 20,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "spell_scroll",
+      "name": "Spell Scroll",
+      "description": "Ancient parchment inscribed with glowing arcane symbols that shift and writhe. Speaking the words aloud will unleash devastating magical energy.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 25,
+      "value": 35,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "fireball_scroll",
+      "name": "Fireball Scroll",
+      "description": "A scroll bound in salamander skin, radiating heat. The words are written in flame that never extinguishes.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 50,
+      "value": 75,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "lightning_scroll",
+      "name": "Lightning Scroll",
+      "description": "Static electricity crackles from this metallic scroll. Storm clouds seem to gather in the ink.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 40,
+      "value": 60,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "ice_shard_scroll",
+      "name": "Ice Shard Scroll",
+      "description": "Frost crystals form on this scroll's surface. Reading it conjures razor-sharp ice that pierces through enemies.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 35,
+      "value": 50,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "meteor_scroll",
+      "name": "Meteor Scroll",
+      "description": "This scroll smells of brimstone and cosmic dust. It calls down a fragment of a fallen star upon your foes.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 80,
+      "value": 120,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "void_scroll",
+      "name": "Void Scroll",
+      "description": "A scroll made of shadow-stuff that hurts to look at. It tears a hole in reality itself.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 100,
+      "value": 200,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "poison_flask",
+      "name": "Poison Flask",
+      "description": "A bubbling green liquid that eats through its container. Throwing it will dissolve flesh and armor alike.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 30,
+      "value": 40,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "holy_water",
+      "name": "Holy Water",
+      "description": "Blessed water in a silver vial. Burns undead and demons like acid, heals the righteous.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 45,
+      "value": 55,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "minor_mana_potion",
+      "name": "Minor Mana Potion",
+      "description": "A swirling blue potion that tastes like starlight. Restores magical energy.",
+      "item_type": "consumable",
+      "effect_type": "heal",
+      "effect_value": 20,
+      "value": 12,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "elixir_of_strength",
+      "name": "Elixir of Strength",
+      "description": "A thick red potion that smells of iron and rage. Your muscles bulge after drinking it. Restores HP and invigorates.",
+      "item_type": "consumable",
+      "effect_type": "heal",
+      "effect_value": 50,
+      "value": 45,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "regeneration_potion",
+      "name": "Regeneration Potion",
+      "description": "A golden potion with flecks of phoenix feather. Wounds close before your eyes after drinking.",
+      "item_type": "consumable",
+      "effect_type": "heal",
+      "effect_value": 100,
+      "value": 80,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "potion_of_fortitude",
+      "name": "Potion of Fortitude",
+      "description": "A dense silver liquid that weighs more than it should. Makes you feel invincible.",
+      "item_type": "consumable",
+      "effect_type": "heal",
+      "effect_value": 60,
+      "value": 55,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "dragons_breath_potion",
+      "name": "Dragon's Breath Potion",
+      "description": "WARNING: Extremely flammable. This potion lets you breathe fire for a short time. Use on enemies!",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 65,
+      "value": 90,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "life_steal_potion",
+      "name": "Life Steal Potion",
+      "description": "A dark potion that whispers hungrily. Drains life force from enemies and gives it to you.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 40,
+      "value": 70,
+      "weight": 1,
+      "stackable": true
+    },
+
+    {
+      "id": "bare_fists",
+      "name": "Bare Fists",
+      "description": "Your own two hands. Not much, but they've gotten you this far.",
+      "item_type": "weapon",
+      "damage": 0,
+      "value": 0,
+      "weight": 0
+    },
+    {
+      "id": "wooden_club",
+      "name": "Wooden Club",
+      "description": "A crude club carved from a thick oak branch. Splinters jut out at odd angles, and the grip is wrapped in dirty cloth. Primitive, but effective for cracking skulls.",
+      "item_type": "weapon",
+      "damage": 2,
+      "value": 3,
+      "weight": 3
+    },
+    {
+      "id": "rusty_dagger",
+      "name": "Rusty Dagger",
+      "description": "A small blade pitted with rust and neglect. The edge is dull and the handle is cracked, but it's better than nothing in a dark corridor.",
+      "item_type": "weapon",
+      "damage": 3,
+      "value": 5,
+      "weight": 1
+    },
+    {
+      "id": "rusted_sword",
+      "name": "Rusted Sword",
+      "description": "An old longsword covered in orange-brown rust. The blade is notched and pitted, the leather grip rotted away. It might break at any moment, but it still has an edge.",
+      "item_type": "weapon",
+      "damage": 4,
+      "value": 8,
+      "weight": 3
+    },
+    {
+      "id": "bone_knife",
+      "name": "Bone Knife",
+      "description": "A wicked blade carved from the femur of some massive creature. Runes are scratched into the yellowed surface, and it hums with faint necromantic energy.",
+      "item_type": "weapon",
+      "damage": 5,
+      "value": 15,
+      "weight": 1
+    },
+    {
+      "id": "short_sword",
+      "name": "Short Sword",
+      "description": "A reliable short sword with a keen edge and leather-wrapped hilt. Well-balanced and easy to wield, this is the weapon of choice for dungeon delvers.",
+      "item_type": "weapon",
+      "damage": 6,
+      "value": 25,
+      "weight": 2
+    },
+    {
+      "id": "hunting_knife",
+      "name": "Hunting Knife",
+      "description": "A curved blade designed for skinning game, but equally effective at skinning goblins. The antler handle provides excellent grip.",
+      "item_type": "weapon",
+      "damage": 5,
+      "value": 20,
+      "weight": 1
+    },
+    {
+      "id": "spiked_mace",
+      "name": "Spiked Mace",
+      "description": "A brutal weapon - an iron ball studded with cruel spikes on a wooden handle. Each spike is stained dark with old blood.",
+      "item_type": "weapon",
+      "damage": 8,
+      "value": 35,
+      "weight": 5
+    },
+    {
+      "id": "battle_axe",
+      "name": "Battle Axe",
+      "description": "A double-headed axe forged for war. The crescent blades gleam with deadly intent, and the ash wood handle is wrapped in worn leather.",
+      "item_type": "weapon",
+      "damage": 10,
+      "value": 45,
+      "weight": 6
+    },
+    {
+      "id": "iron_sword",
+      "name": "Iron Sword",
+      "description": "A well-crafted longsword of solid iron. The blade is straight and true, the edge razor-sharp. A dependable weapon for any warrior.",
+      "item_type": "weapon",
+      "damage": 10,
+      "value": 50,
+      "weight": 4
+    },
+    {
+      "id": "flanged_mace",
+      "name": "Flanged Mace",
+      "description": "A heavy mace with protruding metal flanges designed to crush armor and bone alike. The weight feels reassuring in your hand.",
+      "item_type": "weapon",
+      "damage": 11,
+      "value": 55,
+      "weight": 6
+    },
+    {
+      "id": "silver_rapier",
+      "name": "Silver Rapier",
+      "description": "An elegant thrusting sword with a silver-plated blade and ornate basket hilt. Light as a feather but deadly as a viper's strike.",
+      "item_type": "weapon",
+      "damage": 9,
+      "value": 60,
+      "weight": 2
+    },
+    {
+      "id": "war_hammer",
+      "name": "War Hammer",
+      "description": "A massive hammer with a head of solid steel. One side is flat for crushing, the other a spike for piercing. Skeletons fear this weapon.",
+      "item_type": "weapon",
+      "damage": 12,
+      "value": 65,
+      "weight": 7
+    },
+    {
+      "id": "serrated_blade",
+      "name": "Serrated Blade",
+      "description": "A cruel sword with a saw-toothed edge that tears flesh rather than cuts it. Wounds from this weapon never heal cleanly.",
+      "item_type": "weapon",
+      "damage": 11,
+      "value": 55,
+      "weight": 4
+    },
+    {
+      "id": "venom_blade",
+      "name": "Venom Blade",
+      "description": "A wicked dagger with a hollow blade that drips with spider venom. Even a scratch brings agonizing pain and creeping paralysis.",
+      "item_type": "weapon",
+      "damage": 12,
+      "value": 75,
+      "weight": 2
+    },
+    {
+      "id": "executioners_sword",
+      "name": "Executioner's Sword",
+      "description": "A massive two-handed blade with a squared tip - designed not for combat but for beheading. Dark stains mark the blade despite obvious attempts to clean it.",
+      "item_type": "weapon",
+      "damage": 14,
+      "value": 80,
+      "weight": 8
+    },
+    {
+      "id": "crystal_dagger",
+      "name": "Crystal Dagger",
+      "description": "A blade carved from a single perfect crystal that glows with inner light. It never dulls and cuts through armor like water.",
+      "item_type": "weapon",
+      "damage": 10,
+      "value": 90,
+      "weight": 1
+    },
+    {
+      "id": "blessed_mace",
+      "name": "Blessed Mace",
+      "description": "A mace of pure silver etched with holy symbols. It glows with divine light and strikes true against all unholy creatures.",
+      "item_type": "weapon",
+      "damage": 14,
+      "value": 110,
+      "weight": 5
+    },
+    {
+      "id": "vampiric_blade",
+      "name": "Vampiric Blade",
+      "description": "A black sword that seems to drink in light. Red runes pulse along its length, and you feel it hunger for blood.",
+      "item_type": "weapon",
+      "damage": 13,
+      "value": 120,
+      "weight": 4
+    },
+    {
+      "id": "dwarven_axe",
+      "name": "Dwarven War Axe",
+      "description": "Forged in mountain fires by master smiths, this axe bears intricate knotwork and never needs sharpening. The runes spell out ancient battle oaths.",
+      "item_type": "weapon",
+      "damage": 14,
+      "value": 130,
+      "weight": 5
+    },
+    {
+      "id": "flamberge",
+      "name": "Flamberge",
+      "description": "A two-handed sword with a wavy, flame-like blade. The undulating edge creates horrific wounds and makes parrying nearly impossible.",
+      "item_type": "weapon",
+      "damage": 15,
+      "value": 140,
+      "weight": 6
+    },
+    {
+      "id": "necromancer_staff",
+      "name": "Necromancer's Staff",
+      "description": "A twisted staff of blackened bone topped with a skull that weeps shadow. Dark whispers emanate from within, promising power over death itself.",
+      "item_type": "weapon",
+      "damage": 14,
+      "value": 150,
+      "weight": 3
+    },
+    {
+      "id": "shadow_blade",
+      "name": "Shadow Blade",
+      "description": "A sword forged from crystallized darkness. Its edge exists partially in another dimension, allowing it to slip past defenses.",
+      "item_type": "weapon",
+      "damage": 16,
+      "value": 160,
+      "weight": 2
+    },
+    {
+      "id": "void_touched_blade",
+      "name": "Void-Touched Blade",
+      "description": "A blade that seems to be made of solidified nothingness. Looking at it too long causes vertigo, and those struck by it feel pieces of their soul torn away.",
+      "item_type": "weapon",
+      "damage": 18,
+      "value": 250,
+      "weight": 2
+    },
+    {
+      "id": "queens_blade",
+      "name": "Queen Valdris's Blade",
+      "description": "The legendary sword of Queen Valdris, who sealed the darkness centuries ago. It blazes with holy fire when drawn and strikes with the wrath of the righteous.",
+      "item_type": "weapon",
+      "damage": 20,
+      "value": 350,
+      "weight": 4
+    },
+    {
+      "id": "dragon_slayer",
+      "name": "Dragon Slayer",
+      "description": "A legendary greatsword six feet in length, too large for normal men. Dragon scales are embedded in the crossguard as trophies.",
+      "item_type": "weapon",
+      "damage": 18,
+      "value": 200,
+      "weight": 10
+    },
+    {
+      "id": "starforged_blade",
+      "name": "Starforged Blade",
+      "description": "A blade forged from a fallen star, eternally cold to the touch. Constellations dance along its surface, and it cuts through magic as easily as flesh.",
+      "item_type": "weapon",
+      "damage": 22,
+      "value": 500,
+      "weight": 3
+    },
+    {
+      "id": "warlord_blade",
+      "name": "Warlord's Blade",
+      "description": "A massive black sword that radiates palpable malevolence. Forged in hellfire and quenched in the blood of kings, it whispers promises of conquest to its wielder.",
+      "item_type": "weapon",
+      "damage": 20,
+      "value": 300,
+      "weight": 6
+    },
+    {
+      "id": "soulreaver",
+      "name": "Soulreaver",
+      "description": "An ancient blade that devours the souls of those it slays. Ghostly faces swirl in the metal, screaming silently for release.",
+      "item_type": "weapon",
+      "damage": 22,
+      "value": 400,
+      "weight": 4
+    },
+    {
+      "id": "godsbane",
+      "name": "Godsbane",
+      "description": "A mythical weapon said to have wounded a deity. Reality itself bends around the blade, and holding it fills you with terrible power.",
+      "item_type": "weapon",
+      "damage": 25,
+      "value": 1000,
+      "weight": 5
+    },
+
+    {
+      "id": "cloth_armor",
+      "name": "Cloth Armor",
+      "description": "Padded cloth layered for basic protection. It won't stop a sword, but it might save you from a glancing blow.",
+      "item_type": "armor",
+      "defense_bonus": 1,
+      "value": 10,
+      "weight": 2
+    },
+    {
+      "id": "leather_armor",
+      "name": "Leather Armor",
+      "description": "Sturdy boiled leather armor that covers your torso and shoulders. Scarred and worn but still serviceable.",
+      "item_type": "armor",
+      "defense_bonus": 3,
+      "value": 30,
+      "weight": 5
+    },
+    {
+      "id": "studded_leather",
+      "name": "Studded Leather Armor",
+      "description": "Leather armor reinforced with metal studs that catch and deflect blades. The studs form a pattern of a snarling wolf.",
+      "item_type": "armor",
+      "defense_bonus": 4,
+      "value": 50,
+      "weight": 6
+    },
+    {
+      "id": "chainmail",
+      "name": "Chainmail",
+      "description": "A shirt of interlocking iron rings that jingles softly as you move. Heavy but effective against slashing attacks.",
+      "item_type": "armor",
+      "defense_bonus": 5,
+      "value": 75,
+      "weight": 12
+    },
+    {
+      "id": "brigandine",
+      "name": "Brigandine Armor",
+      "description": "A coat of small metal plates riveted inside layers of leather. Offers excellent protection while remaining flexible.",
+      "item_type": "armor",
+      "defense_bonus": 6,
+      "value": 90,
+      "weight": 10
+    },
+    {
+      "id": "iron_shield",
+      "name": "Iron Shield",
+      "description": "A heavy round shield of hammered iron. Dents and scratches tell of battles survived. The leather arm straps are worn but hold firm.",
+      "item_type": "armor",
+      "defense_bonus": 5,
+      "value": 45,
+      "weight": 8
+    },
+    {
+      "id": "bone_shield",
+      "name": "Bone Shield",
+      "description": "A shield made from bones fused together with dark magic. Skulls stare out from its surface. Macabre but surprisingly effective.",
+      "item_type": "armor",
+      "defense_bonus": 4,
+      "value": 35,
+      "weight": 6
+    },
+    {
+      "id": "scale_mail",
+      "name": "Scale Mail",
+      "description": "Overlapping metal scales sewn onto leather, providing excellent protection while maintaining mobility.",
+      "item_type": "armor",
+      "defense_bonus": 6,
+      "value": 100,
+      "weight": 14
+    },
+    {
+      "id": "half_plate",
+      "name": "Half Plate Armor",
+      "description": "Plate armor covering vital areas combined with chainmail for flexibility. The balance of protection and mobility favored by veteran warriors.",
+      "item_type": "armor",
+      "defense_bonus": 7,
+      "value": 150,
+      "weight": 18
+    },
+    {
+      "id": "plate_armor",
+      "name": "Plate Armor",
+      "description": "Full plate armor of polished steel. You feel invincible wearing it, though movement is somewhat restricted.",
+      "item_type": "armor",
+      "defense_bonus": 8,
+      "value": 200,
+      "weight": 25
+    },
+    {
+      "id": "tower_shield",
+      "name": "Tower Shield",
+      "description": "A massive rectangular shield that can cover your entire body. Too heavy for offense but nearly impenetrable.",
+      "item_type": "armor",
+      "defense_bonus": 7,
+      "value": 80,
+      "weight": 15
+    },
+    {
+      "id": "reinforced_boots",
+      "name": "Reinforced Boots",
+      "description": "Heavy boots with steel plating and thick soles. Your kicks now carry the weight of iron.",
+      "item_type": "armor",
+      "defense_bonus": 2,
+      "value": 35,
+      "weight": 4
+    },
+    {
+      "id": "steel_gauntlets",
+      "name": "Steel Gauntlets",
+      "description": "Articulated gauntlets of fine steel that protect your hands while allowing full dexterity. The knuckles are reinforced for punching.",
+      "item_type": "armor",
+      "defense_bonus": 2,
+      "value": 40,
+      "weight": 3
+    },
+    {
+      "id": "torturer_helm",
+      "name": "Torturer's Helm",
+      "description": "A sinister iron helm with a featureless face plate. Two narrow slits glow red in the darkness. Those who wore it were feared even by the guards.",
+      "item_type": "armor",
+      "defense_bonus": 3,
+      "value": 60,
+      "weight": 4
+    },
+    {
+      "id": "shadow_cloak",
+      "name": "Shadow Cloak",
+      "description": "A cloak woven from shadow itself. It seems to deflect attacks into nothingness.",
+      "item_type": "armor",
+      "defense_bonus": 6,
+      "value": 150,
+      "weight": 1
+    },
+    {
+      "id": "arcane_robes",
+      "name": "Arcane Robes",
+      "description": "Robes woven with protective enchantments that shimmer with barely contained magic. Symbols of power are stitched into every seam.",
+      "item_type": "armor",
+      "defense_bonus": 5,
+      "value": 120,
+      "weight": 2
+    },
+    {
+      "id": "dark_cultist_robes",
+      "name": "Dark Cultist Robes",
+      "description": "Black robes inscribed with forbidden symbols. Shadows cling to the fabric, and wearing them fills you with unease - but also protection.",
+      "item_type": "armor",
+      "defense_bonus": 5,
+      "value": 100,
+      "weight": 2
+    },
+    {
+      "id": "spider_silk_armor",
+      "name": "Spider Silk Armor",
+      "description": "Armor woven from the silk of giant spiders. Incredibly light yet strong as steel, it seems to flow like water when you move.",
+      "item_type": "armor",
+      "defense_bonus": 7,
+      "value": 180,
+      "weight": 3
+    },
+    {
+      "id": "holy_shield",
+      "name": "Holy Shield",
+      "description": "A shield blessed by the gods themselves. It gleams with divine light that repels darkness and shields the faithful.",
+      "item_type": "armor",
+      "defense_bonus": 8,
+      "value": 200,
+      "weight": 8
+    },
+    {
+      "id": "valdris_shield",
+      "name": "Valdris's Shield",
+      "description": "The shield carried by Queen Valdris in her final battle. It has never been breached, and divine fire dances across its surface.",
+      "item_type": "armor",
+      "defense_bonus": 10,
+      "value": 400,
+      "weight": 10
+    },
+    {
+      "id": "celestial_armor",
+      "name": "Celestial Armor",
+      "description": "Armor that seems to be made of captured starlight. It weighs almost nothing yet stops blows that would fell a giant.",
+      "item_type": "armor",
+      "defense_bonus": 12,
+      "value": 600,
+      "weight": 5
+    },
+    {
+      "id": "amulet_of_the_void",
+      "name": "Amulet of the Void",
+      "description": "A pendant containing a fragment of the void between stars. Attacks seem to bend around the wearer, deflected into nothingness.",
+      "item_type": "armor",
+      "defense_bonus": 8,
+      "value": 300,
+      "weight": 1
+    },
+    {
+      "id": "dragon_scale",
+      "name": "Dragon Scale Armor",
+      "description": "Armor crafted from the scales of a red dragon. It radiates heat and turns aside all but the mightiest blows.",
+      "item_type": "armor",
+      "defense_bonus": 10,
+      "value": 500,
+      "weight": 15
+    },
+
+    {
+      "id": "crypt_key",
+      "name": "Crypt Key",
+      "description": "An ornate key made of blackened iron with a skull-shaped bow. It radiates unnatural cold that seeps into your bones.",
+      "item_type": "key",
+      "value": 0,
+      "weight": 1
+    },
+    {
+      "id": "jail_key",
+      "name": "Jail Key",
+      "description": "A heavy iron key with rust along its teeth. It opens the cells in the prison block.",
+      "item_type": "key",
+      "value": 0,
+      "weight": 1
+    },
+    {
+      "id": "library_key",
+      "name": "Library Key",
+      "description": "An ornate brass key with a book-shaped handle. It opens the forbidden archives of the library.",
+      "item_type": "key",
+      "value": 0,
+      "weight": 1
+    },
+    {
+      "id": "torch",
+      "name": "Torch",
+      "description": "A wooden torch wrapped in oil-soaked cloth, burning with a steady orange flame. It pushes back the darkness and reveals hidden secrets.",
+      "item_type": "key",
+      "value": 5,
+      "weight": 1
+    },
+    {
+      "id": "warlord_amulet",
+      "name": "Warlord's Amulet",
+      "description": "A blood-red amulet that pulses with malevolent energy. Holding it fills you with visions of conquest and domination. This is proof of the Warlord's defeat.",
+      "item_type": "quest",
+      "value": 500,
+      "weight": 1
+    },
+    {
+      "id": "rat_tail",
+      "name": "Rat Tail",
+      "description": "A severed rat tail, still twitching. Disgusting, but some alchemists pay good coin for such things.",
+      "item_type": "misc",
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "id": "stone_fragment",
+      "name": "Stone Fragment",
+      "description": "A fragment of animated stone that still radiates faint warmth. Runes glow dimly on its surface.",
+      "item_type": "misc",
+      "value": 15,
+      "weight": 3
+    },
+    {
+      "id": "gold_coins",
+      "name": "Gold Coins",
+      "description": "A handful of ancient gold coins stamped with the face of a long-dead king.",
+      "item_type": "currency",
+      "value": 25,
+      "weight": 1
+    },
+    {
+      "id": "goblin_ear",
+      "name": "Goblin Ear",
+      "description": "A pointed green ear, proof of a goblin kill. Guards sometimes pay bounties for these.",
+      "item_type": "misc",
+      "value": 3,
+      "weight": 1
+    },
+    {
+      "id": "spider_fang",
+      "name": "Spider Fang",
+      "description": "A massive fang dripping with paralytic venom. Alchemists prize these for their potent poisons.",
+      "item_type": "misc",
+      "value": 20,
+      "weight": 1
+    },
+    {
+      "id": "dark_essence",
+      "name": "Dark Essence",
+      "description": "A swirling orb of pure darkness captured in a crystal sphere. Mages covet this for their rituals.",
+      "item_type": "misc",
+      "value": 50,
+      "weight": 1
+    }
+  ]
+}

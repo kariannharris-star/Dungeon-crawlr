@@ -1,0 +1,135 @@
+{
+  "enemies": [
+    {
+      "id": "goblin_scout",
+      "name": "Goblin Scout",
+      "hp": 20,
+      "max_hp": 20,
+      "attack": 5,
+      "defense": 1,
+      "xp_reward": 15,
+      "gold_reward": 5,
+      "description": "A small, wiry creature with sharp teeth and cunning eyes. It watches your every move.",
+      "drop_table": [
+        {"item_id": "goblin_ear", "chance": 0.40},
+        {"item_id": "rusty_dagger", "chance": 0.10}
+      ]
+    },
+    {
+      "id": "skeleton_warrior",
+      "name": "Skeleton Warrior",
+      "hp": 35,
+      "max_hp": 35,
+      "attack": 8,
+      "defense": 3,
+      "xp_reward": 25,
+      "gold_reward": 10,
+      "description": "Bones held together by dark magic. It raises its rusted blade with mechanical precision.",
+      "drop_table": [
+        {"item_id": "bone_shield", "chance": 0.15},
+        {"item_id": "bone_knife", "chance": 0.10}
+      ]
+    },
+    {
+      "id": "giant_rat",
+      "name": "Giant Rat",
+      "hp": 15,
+      "max_hp": 15,
+      "attack": 4,
+      "defense": 0,
+      "xp_reward": 10,
+      "gold_reward": 2,
+      "description": "A rat the size of a dog, with yellowed fangs dripping with disease.",
+      "drop_table": [
+        {"item_id": "rat_tail", "chance": 0.50}
+      ]
+    },
+    {
+      "id": "dark_mage",
+      "name": "Dark Mage",
+      "hp": 25,
+      "max_hp": 25,
+      "attack": 12,
+      "defense": 1,
+      "xp_reward": 35,
+      "gold_reward": 15,
+      "description": "A hooded figure crackling with dark energy. Shadows coil around its gnarled fingers.",
+      "drop_table": [
+        {"item_id": "spell_scroll", "chance": 0.30},
+        {"item_id": "dark_essence", "chance": 0.20}
+      ]
+    },
+    {
+      "id": "giant_spider",
+      "name": "Giant Spider",
+      "hp": 45,
+      "max_hp": 45,
+      "attack": 10,
+      "defense": 4,
+      "xp_reward": 40,
+      "gold_reward": 12,
+      "description": "A monstrous arachnid the size of a horse. Its many eyes gleam with predatory hunger, and venom drips from its fangs.",
+      "drop_table": [
+        {"item_id": "spider_fang", "chance": 0.40},
+        {"item_id": "antidote", "chance": 0.25}
+      ]
+    },
+    {
+      "id": "lake_guardian",
+      "name": "Lake Guardian",
+      "hp": 70,
+      "max_hp": 70,
+      "attack": 15,
+      "defense": 6,
+      "xp_reward": 75,
+      "gold_reward": 35,
+      "description": "An ancient water elemental bound to protect the lake island. Its form shifts constantly between waves and mist, and its touch is freezing cold.",
+      "drop_table": [
+        {"item_id": "greater_health_potion", "chance": 0.50}
+      ]
+    },
+    {
+      "id": "stone_golem",
+      "name": "Stone Golem",
+      "hp": 80,
+      "max_hp": 80,
+      "attack": 14,
+      "defense": 8,
+      "xp_reward": 60,
+      "gold_reward": 20,
+      "description": "A hulking construct of animated stone. Each step shakes the ground.",
+      "drop_table": [
+        {"item_id": "stone_fragment", "chance": 0.40}
+      ]
+    },
+    {
+      "id": "dungeon_warlord",
+      "name": "Dungeon Warlord",
+      "hp": 150,
+      "max_hp": 150,
+      "attack": 20,
+      "defense": 10,
+      "xp_reward": 200,
+      "gold_reward": 100,
+      "description": "The master of this dungeon, a towering figure clad in black armor. His eyes burn with centuries of hatred.",
+      "drop_table": [
+        {"item_id": "warlord_amulet", "chance": 1.0},
+        {"item_id": "warlord_blade", "chance": 0.50}
+      ]
+    },
+    {
+      "id": "mimic",
+      "name": "Mimic",
+      "hp": 40,
+      "max_hp": 40,
+      "attack": 10,
+      "defense": 5,
+      "xp_reward": 30,
+      "gold_reward": 25,
+      "description": "What appeared to be a chest reveals rows of teeth and a long, slavering tongue!",
+      "drop_table": [
+        {"item_id": "greater_health_potion", "chance": 0.50}
+      ]
+    }
+  ]
+}

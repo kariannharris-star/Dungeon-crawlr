@@ -1,0 +1,568 @@
+{
+  "starting_room": "village_square",
+  "rooms": [
+    {
+      "id": "village_square",
+      "name": "Thornwick Village Square",
+      "description": "You stand in the central square of Thornwick, a small village that has seen better days. A cracked stone fountain sits in the center, its water long since dried up. Weeds push through the cobblestones, and the few villagers who pass by do so with hunched shoulders and fearful glances toward the northern road.\n\nA weathered signpost points in several directions:\n- NORTH: The Old Dungeon (WARNING: DANGER!)\n- EAST: The Blacksmith\n- WEST: The Apothecary\n- SOUTH: The Tavern\n\nBattered notice boards are plastered with faded warnings about the dungeon to the north, where an ancient evil has awakened. A reward is posted for any brave soul who can defeat the Warlord who dwells within.\n\nThe air smells of wood smoke and fear. This village lives in the shadow of darkness.",
+      "short_description": "The village square of Thornwick. Shops surround you, and the dungeon looms to the north.",
+      "exits": {
+        "north": "dungeon_entrance",
+        "east": "blacksmith_shop",
+        "west": "apothecary",
+        "south": "tavern"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {},
+      "is_safe": true
+    },
+    {
+      "id": "blacksmith_shop",
+      "name": "The Iron Forge - Blacksmith",
+      "description": "Heat washes over you as you enter the blacksmith's shop. The forge burns bright orange, and the rhythmic clang of hammer on anvil fills the air. Weapons and armor of all types hang from the walls and rest on wooden racks.\n\nGarret the blacksmith is a massive man with arms like tree trunks. Soot covers his leather apron, and his eyes are sharp despite his age. He nods as you enter.\n\n'Looking to arm yourself for the dungeon, are ye? Brave or foolish, hard to say. But I've got the steel you'll need either way. Take a look at me wares.'\n\nThe shop is well-stocked with blades, hammers, axes, and armor of all qualities. Prices are marked on small wooden tags.",
+      "short_description": "The blacksmith's forge. Garret hammers at the anvil, surrounded by weapons and armor.",
+      "exits": {
+        "west": "village_square"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {},
+      "is_shop": true,
+      "shop_type": "weapons",
+      "shop_inventory": ["rusty_dagger", "short_sword", "iron_sword", "battle_axe", "war_hammer", "silver_rapier", "leather_armor", "chainmail", "iron_shield", "scale_mail", "plate_armor", "brigandine", "half_plate", "reinforced_boots", "steel_gauntlets"]
+    },
+    {
+      "id": "apothecary",
+      "name": "The Healing Herb - Apothecary",
+      "description": "The scent of dried herbs and strange chemicals fills your nostrils as you enter the apothecary. Glass bottles of every color line the shelves, filled with bubbling liquids, dried ingredients, and things you'd rather not identify.\n\nAn elderly woman with silver hair and knowing eyes looks up from her mortar and pestle. She is Sage Miriam, the village healer and potion-maker.\n\n'Ah, another would-be hero. Come to stock up before facing the darkness, have you? Smart. The dungeon will try to kill you in a hundred ways - poison, wounds, curses. I have remedies for most of them.'\n\nShe gestures to the shelves.\n\n'Potions to heal, scrolls to harm, and a few special items for those with gold to spare. Everything has a price, but so does dying unprepared.'",
+      "short_description": "The apothecary shop. Potions and scrolls line every shelf, and Sage Miriam watches you with wise eyes.",
+      "exits": {
+        "east": "village_square"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {},
+      "is_shop": true,
+      "shop_type": "potions",
+      "shop_inventory": ["health_potion", "greater_health_potion", "supreme_health_potion", "antidote", "spell_scroll", "fireball_scroll", "lightning_scroll", "ice_shard_scroll", "meteor_scroll", "regeneration_potion", "elixir_of_strength", "dragons_breath_potion", "holy_water"]
+    },
+    {
+      "id": "tavern",
+      "name": "The Rusty Blade Tavern",
+      "description": "The tavern is warm and surprisingly lively despite the village's grim mood. A fire crackles in a great stone hearth, and the smell of roasting meat and spilled ale fills the air. Adventurers and locals alike sit at worn wooden tables, sharing drinks and stories.\n\nBehind the bar, a one-eyed man polishes glasses with practiced ease. This is Old Harken, the tavern keeper and a former adventurer himself - as evidenced by his missing eye and the countless scars on his arms.\n\n'Looking for the dungeon, are ya? I lost this eye to a skeleton in that cursed place, thirty years ago. Barely made it out alive.'\n\nHe leans in close.\n\n'Word of advice: don't trust the chests. And if you hear whispering, run. The Warlord's been dead for centuries, but death never stopped him before.'\n\nThe tavern doesn't sell equipment, but it's a good place to rest and hear rumors.",
+      "short_description": "The village tavern. Adventurers share stories around the fire while Old Harken tends bar.",
+      "exits": {
+        "north": "village_square"
+      },
+      "items": ["health_potion"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {},
+      "is_safe": true
+    },
+    {
+      "id": "dungeon_entrance",
+      "name": "The Dungeon Gates",
+      "description": "The road from the village ends at a massive archway of black stone, carved with dire warnings in a dozen dead languages. This is the entrance to the ancient dungeon, sealed for centuries until the recent earthquakes broke the wards.\n\nBeyond the archway, stone steps descend into absolute darkness. Cold air rises from below, carrying the scent of age and death. You can hear distant sounds - dripping water, scraping stone, and something that might be breathing.\n\nThe villagers have placed torches in iron sconces near the entrance, but their light seems diminished here, as if the darkness is hungry.\n\nA final warning is carved above the archway:\n'ABANDON HOPE, ALL YE WHO ENTER HERE'\n\nThe dungeon awaits. There is no turning back once you descend.",
+      "short_description": "The entrance to the dungeon. Black stone archways frame steps that descend into darkness.",
+      "exits": {
+        "south": "village_square",
+        "down": "entrance_hall"
+      },
+      "items": ["torch"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "entrance_hall",
+      "name": "The Entrance Hall",
+      "description": "You stand in what was once a grand entrance hall, now a monument to decay and forgotten glory. Massive stone pillars rise into shadow, their surfaces crawling with cracks like ancient veins. Tattered tapestries hang from rusted iron rods - you can barely make out scenes of battles and coronations through the moth-eaten holes and water stains.\n\nThe floor is a mosaic of colored tiles, though centuries of boots and claws have worn most of the pattern away. Dust motes drift through pale shafts of light that filter down from somewhere far above. The air is thick and stale, carrying the musty scent of ages past and something else - something coppery, like old blood.\n\nTo the north, a heavy iron door stands slightly ajar, strange runes carved into its surface pulsing with a faint, sickly green light. Beyond it, you hear the distant sound of dripping water.\n\nStairs behind you lead back up to the dungeon entrance and the village beyond.",
+      "short_description": "The ruined entrance hall. Tattered tapestries hang from the walls, and a heavy iron door leads north.",
+      "exits": {
+        "north": "mossy_antechamber",
+        "east": "guard_barracks",
+        "up": "dungeon_entrance"
+      },
+      "items": ["wooden_club"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "guard_barracks",
+      "name": "The Abandoned Barracks",
+      "description": "This long chamber once housed the dungeon's guards. Rows of rotted bunks line the walls, their straw mattresses reduced to dust and mold. Rusted weapon racks stand empty, their contents long since looted or corroded to uselessness.\n\nPersonal effects lie scattered about - a broken mirror, a child's toy carved from wood, a love letter too faded to read. These guards had families once. Lives. Now they are less than memories.\n\nA large fireplace dominates one wall, its stones blackened with centuries of soot. Something glints in the ashes - perhaps worth investigating.\n\nRat droppings cover nearly every surface. The vermin have made this place their home.",
+      "short_description": "The abandoned guard barracks. Rotted bunks and rusted equipment fill the dusty chamber.",
+      "exits": {
+        "west": "entrance_hall",
+        "south": "prison_cells"
+      },
+      "items": ["rusty_dagger", "health_potion"],
+      "enemy_id": "giant_rat",
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "prison_cells",
+      "name": "The Prison Block",
+      "description": "Iron bars divide this chamber into a dozen small cells, each barely large enough for a man to lie down. The cells are empty now - mostly. Skeletal remains huddle in corners, still wearing rusted shackles. Some died waiting for rescue. Others... the scratch marks on the walls tell a darker story.\n\nA heavy ring of keys hangs from a peg by the guard station. Most are too corroded to use, but one or two might still turn a lock.\n\nOne cell at the far end has been broken open from the inside. The bars are bent outward, twisted by tremendous force. Whatever was held here did not wait to be released.\n\nA narrow passage in the floor leads down to darkness below.",
+      "short_description": "The prison block. Skeletal prisoners remain in their cells, and one cell has been violently broken open.",
+      "exits": {
+        "north": "guard_barracks",
+        "down": "torture_chamber"
+      },
+      "items": ["bone_knife"],
+      "enemy_id": "skeleton_warrior",
+      "chest": {
+        "id": "chest_prison_01",
+        "state": "locked",
+        "key_required": "jail_key",
+        "trap_damage": 0,
+        "loot_tier": "uncommon",
+        "fixed_loot": ["studded_leather", "hunting_knife", "jail_key"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "torture_chamber",
+      "name": "The Torture Chamber",
+      "description": "Your stomach turns as you descend into this chamber of horrors. Rusted iron implements of pain hang from the walls - thumbscrews, hot irons, flaying knives. A massive rack dominates the center of the room, its wooden frame dark with ancient bloodstains.\n\nAn iron maiden stands in one corner, its interior lined with cruel spikes. It is slightly ajar, and you glimpse bones within. Chains dangle from the ceiling, some still bearing skeletal hands at their ends.\n\nThe walls are scratched with final messages from the tortured: pleas for mercy, curses upon their tormentors, prayers to forgotten gods. One message repeats over and over: 'THE WARLORD SEES ALL.'\n\nDespite the horror, you notice some of the tools are of exceptional craftsmanship. Cruel, but well-made.",
+      "short_description": "A horrific torture chamber. Implements of pain cover every surface, and the walls bear the messages of the damned.",
+      "exits": {
+        "up": "prison_cells",
+        "west": "flooded_cellar"
+      },
+      "items": ["antidote"],
+      "enemy_id": "dark_mage",
+      "chest": {
+        "id": "chest_torture_01",
+        "state": "trapped",
+        "trap_damage": 15,
+        "loot_tier": "rare",
+        "fixed_loot": ["serrated_blade", "torturer_helm", "greater_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "mossy_antechamber",
+      "name": "The Mossy Antechamber",
+      "description": "You step into a chamber where nature has begun its slow reclamation of civilization. The walls are carpeted in thick, dark green moss that glistens wetly in your torchlight. Pale mushrooms cluster in the corners, their caps faintly luminescent, casting an eerie blue-green glow.\n\nWater seeps down the walls in thin rivulets, collecting in dark pools on the uneven floor. Each step sends ripples across the standing water and echoes off the low ceiling. The air is thick with humidity and the earthy smell of decay - rotting vegetation and something fouler beneath.\n\nRusted chains dangle from iron rings set into the ceiling. What were they used for? You're not sure you want to know. Against the eastern wall, a wooden chest sits half-submerged in a puddle, its iron bands green with verdigris.\n\nSomething moves in the shadows ahead, and two yellow eyes catch the light.",
+      "short_description": "A damp chamber covered in moss and mushrooms. Water drips from the ceiling, and shadows move in the corners.",
+      "exits": {
+        "south": "entrance_hall",
+        "north": "corridor_of_whispers",
+        "east": "armory_ruins",
+        "west": "collapsed_tunnel"
+      },
+      "items": ["health_potion"],
+      "enemy_id": "goblin_scout",
+      "chest": {
+        "id": "chest_mossy_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "common",
+        "fixed_loot": ["bone_knife", "cloth_armor"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "collapsed_tunnel",
+      "name": "The Collapsed Tunnel",
+      "description": "A cave-in has blocked most of this passage, leaving only a cramped crawlspace through the rubble. Massive stone blocks lie scattered like a giant's toys, and wooden support beams have snapped like twigs.\n\nThe collapse looks recent - within the last decade, perhaps. Someone was mining here, trying to dig deeper into the earth. They found something they shouldn't have.\n\nThrough gaps in the rubble, you can see a larger chamber beyond, bathed in an eerie purple glow. Strange symbols are carved into the stones that fell - not dungeon architecture, but something older. Something that was buried here long before the dungeon was built.\n\nA narrow path leads down through the rubble to whatever lies below.",
+      "short_description": "A collapsed mining tunnel. Through the rubble, purple light glows from somewhere deeper.",
+      "exits": {
+        "east": "mossy_antechamber",
+        "down": "ancient_shrine"
+      },
+      "items": ["torch", "minor_mana_potion"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "ancient_shrine",
+      "name": "The Ancient Shrine",
+      "description": "You emerge into a chamber that predates the dungeon by millennia. The architecture is alien - smooth curves where there should be angles, proportions that hurt to look at directly. The walls are covered in spiraling symbols that seem to move in your peripheral vision.\n\nIn the center stands an altar of black obsidian, its surface etched with a pattern of stars. The purple light emanates from a crystal floating above it, suspended by nothing visible, slowly rotating in defiance of gravity.\n\nOfferings surround the altar - gold coins, jeweled weapons, the mummified remains of sacrifices. Some are fresh. Someone still worships here.\n\nA voice echoes in your mind, not heard but felt: 'OFFER... OR TAKE... THERE IS ALWAYS A PRICE...'\n\nThe crystal pulses. Do you dare approach?",
+      "short_description": "An ancient shrine older than the dungeon itself. A floating crystal pulses with otherworldly power above a black altar.",
+      "exits": {
+        "up": "collapsed_tunnel"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_shrine_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "legendary",
+        "fixed_loot": ["void_touched_blade", "amulet_of_the_void", "supreme_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {},
+      "has_fountain": true,
+      "fountain_effects": ["curse_or_blessing", "level_up", "major_damage", "full_heal", "random_weapon"]
+    },
+    {
+      "id": "corridor_of_whispers",
+      "name": "The Corridor of Whispers",
+      "description": "A long, narrow corridor stretches before you, its walls pressing close like the throat of some great stone beast. The moment you enter, you understand how it earned its name - the air itself seems to speak. Whispers echo from everywhere and nowhere, overlapping voices in languages you almost recognize, almost understand.\n\nYour torch flame flickers wildly despite the still air. Shadows dance in impossible directions. The whispers grow louder as you move, then fade, then surge again. You catch fragments: 'Turn back...' 'The blood price...' 'He waits...' 'Forever...' But when you strain to listen, there is only silence.\n\nFaded murals cover the walls, depicting scenes of war and worship. Armies march across painted fields. Priests make offerings before a towering figure wreathed in shadow. In one panel, the figure holds what appears to be a blood-red amulet. Its painted eyes seem to follow you.\n\nThe corridor continues north toward a grand staircase. To the west, a section of wall looks different from the rest - the stones fitted more recently, the mortar newer. To the east, a faint glow emanates from a side passage.",
+      "short_description": "The whispering corridor. Voices echo from the walls, speaking in fragments of warning and madness.",
+      "exits": {
+        "south": "mossy_antechamber",
+        "north": "throne_room_approach",
+        "west": "hidden_alcove",
+        "east": "crystal_fountain"
+      },
+      "items": ["health_potion"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {
+        "west": "torch"
+      }
+    },
+    {
+      "id": "armory_ruins",
+      "name": "The Ruined Armory",
+      "description": "This chamber was once a proud armory, stocked with weapons to equip an army. Now it is a graveyard of broken steel and shattered dreams. Weapon racks line the walls, most collapsed or leaning drunkenly, their contents scattered across the floor in a carpet of rust and ruin.\n\nSplintered shield halves bear the faded crest of a lion - whatever kingdom they protected is long dead. Suit of plate armor stands in alcoves along the walls like silent sentinels, but closer inspection reveals gaping holes rusted through the metal. One suit has collapsed entirely into a heap of corroded plates.\n\nScattered among the weapons are bones - human bones, picked clean and yellowed with age. Some still clutch rusted blades in skeletal fingers. A great battle was fought here, and everyone lost.\n\nYet amid the ruin, some weapons still gleam. A careful search might yield something useful. Near the back of the room, an iron sword stands embedded point-down in a wooden weapon stand, as if waiting for a worthy hand.\n\nA grinding sound echoes from behind a collapsed rack. Something is moving among the bones.",
+      "short_description": "A ruined armory filled with broken weapons and old bones. Some intact weapons still gleam amid the rust.",
+      "exits": {
+        "west": "mossy_antechamber",
+        "south": "flooded_cellar",
+        "east": "forgotten_library"
+      },
+      "items": ["leather_armor", "rusted_sword"],
+      "enemy_id": "skeleton_warrior",
+      "chest": {
+        "id": "chest_armory_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "uncommon",
+        "fixed_loot": ["iron_sword", "chainmail"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "forgotten_library",
+      "name": "The Forgotten Library",
+      "description": "Towering bookshelves line this vast chamber, reaching up into darkness beyond your torchlight. Thousands of books fill the shelves - tomes of leather and vellum, scrolls in brass tubes, stone tablets etched with forgotten alphabets.\n\nMost of the books have succumbed to time. Pages crumble at a touch, ink faded to illegibility, leather covers consumed by mold. But here and there, protected by preservation magic, some volumes remain intact, their spines glittering with gold leaf.\n\nReading tables are scattered about, covered in the remains of interrupted study - open books, dried ink pots, skeletal hands still clutching quills. The scholars died at their desks, and no one came to bury them.\n\nA massive chandelier of crystal and iron hangs overhead, its candles long since burned out. In the dust on the floor, you can see recent footprints leading toward a section marked 'FORBIDDEN TEXTS.'\n\nSomething moves between the shelves. A hooded figure? Or just your imagination?",
+      "short_description": "A vast library filled with ancient books. Skeletal scholars sit at dusty desks, forever studying.",
+      "exits": {
+        "west": "armory_ruins",
+        "north": "ritual_chamber"
+      },
+      "items": ["spell_scroll", "health_potion"],
+      "enemy_id": "dark_mage",
+      "chest": {
+        "id": "chest_library_01",
+        "state": "locked",
+        "key_required": "library_key",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["meteor_scroll", "void_scroll", "arcane_robes", "library_key"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "ritual_chamber",
+      "name": "The Ritual Chamber",
+      "description": "Dark magic permeates this circular chamber. A pentagram is carved into the floor, its channels still stained with blood that glistens wetly despite its obvious age. Candles of black wax ring the circle, some still burning with flames that give no heat.\n\nArcane symbols cover every inch of the walls, written in blood, chalk, and substances you cannot identify. Some seem to writhe and shift when you're not looking directly at them. The air tastes of copper and ozone.\n\nAt the circle's center stands a pedestal holding a grimoire bound in what looks disturbingly like human skin. The book is open, its pages covered in handwriting that grows increasingly frantic, increasingly mad. The final entry reads: 'IT IS COMING THROUGH. GOD HELP US ALL.'\n\nSomething came through here. Something terrible. And the way it went leads deeper into the dungeon.",
+      "short_description": "A dark ritual chamber. A blood-stained pentagram dominates the floor, and a grimoire of dark magic lies open on a pedestal.",
+      "exits": {
+        "south": "forgotten_library",
+        "east": "throne_room_approach"
+      },
+      "items": ["fireball_scroll", "lightning_scroll", "antidote"],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_ritual_01",
+        "state": "trapped",
+        "trap_damage": 25,
+        "loot_tier": "rare",
+        "fixed_loot": ["necromancer_staff", "dark_cultist_robes", "greater_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "flooded_cellar",
+      "name": "The Flooded Cellar",
+      "description": "The stairs down are slick with slime, and you understand why when you reach the bottom - icy black water swallows your legs to the knee. The cold is immediate and brutal, seeping through your boots and into your bones. Your teeth want to chatter.\n\nThis was once a wine cellar or storage room, but the walls have cracked and groundwater has claimed it. Barrels and crates bob gently in the dark water, bumping against each other with hollow wooden sounds. Some have split open, spilling moldy grain and rusted tools.\n\nThe ceiling is low - you must duck under hanging roots that have broken through the stone. In places, the roots form dense curtains you must push through, and each time something slithers away through the water at your approach. You try not to think about what else might be swimming down here.\n\nAgainst the far wall, somehow still above the waterline, sits an ornate chest bound in brass. The metal gleams unlike anything else in this drowned place. To the west, a dark passage leads to a chamber that smells of blood.\n\nThe water ripples. Something is coming.",
+      "short_description": "A flooded cellar. Knee-deep black water hides whatever lurks beneath the surface.",
+      "exits": {
+        "north": "armory_ruins",
+        "east": "crypt_chamber",
+        "west": "blood_fountain",
+        "south": "underground_lake"
+      },
+      "items": ["antidote", "greater_health_potion"],
+      "enemy_id": "giant_rat",
+      "chest": {
+        "id": "chest_flooded_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["crystal_dagger", "shadow_cloak"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "underground_lake",
+      "name": "The Underground Lake",
+      "description": "The passage opens into a vast cavern, and you find yourself standing at the edge of a subterranean lake. The water is impossibly still, like black glass, reflecting the stalactites that hang from the ceiling like stone fangs.\n\nBioluminescent fungi dot the cavern walls, casting an ethereal blue-green glow across the water. In its depths, you can see the ruins of a structure - perhaps a temple, now drowned. Strange lights flicker in its windows.\n\nA narrow stone walkway extends along the cavern wall, leading to what appears to be a small island in the center of the lake. Something glitters there.\n\nThe water is too still. Too quiet. You get the distinct feeling something massive sleeps beneath the surface, and one wrong move could wake it.",
+      "short_description": "A vast underground lake. Ruins glitter beneath the still water, and something massive sleeps in the depths.",
+      "exits": {
+        "north": "flooded_cellar",
+        "east": "lake_island"
+      },
+      "items": ["health_potion"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "lake_island",
+      "name": "The Lake Island",
+      "description": "The narrow walkway leads to a small island of weathered stone rising from the lake. At its center stands a statue of a warrior queen, her stone armor incredibly detailed, her expression one of fierce determination. In her hands she holds a real sword - not stone, but gleaming steel.\n\nPlates of offerings surround the statue: gold coins green with age, jeweled rings, and the bones of small animals. This was a place of worship once. Perhaps it still is.\n\nAn inscription at the statue's base reads: 'QUEEN VALDRIS, WHO SEALED THE DARKNESS. MAY HER BLADE NEVER BE NEEDED AGAIN.'\n\nThe sword in her hands looks like it was made yesterday. It practically hums with enchantment.\n\nAs you approach, the water around the island begins to churn...",
+      "short_description": "A small island with a statue of an ancient warrior queen. She holds a sword of unmistakable power.",
+      "exits": {
+        "west": "underground_lake"
+      },
+      "items": [],
+      "enemy_id": "lake_guardian",
+      "chest": {
+        "id": "chest_island_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "legendary",
+        "fixed_loot": ["queens_blade", "valdris_shield", "supreme_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "crypt_chamber",
+      "name": "The Crypt Chamber",
+      "description": "You emerge from the water into a chamber of death. Stone sarcophagi line the walls in recessed alcoves, their lids carved with the likenesses of the dead within - proud warriors, stern priests, noble ladies. All wear expressions of peaceful repose, but the peace is a lie.\n\nCandles burn in iron sconces, but their flames are wrong - cold, blue-white, casting no warmth. They illuminate the chamber in shifting, ghostly light that makes the carved faces seem to move. The air is thick with the cloying sweetness of ancient decay, perfumed but not concealed.\n\nRunes are carved into the floor in a great circle, their channels filled with what looks like dried blood turned black with age. The pattern is complex, disturbing to look at directly. Your eyes keep sliding away from its center.\n\nOne sarcophagus stands open, its lid pushed aside. The interior is lined with rotted velvet and contains only dust and a single iron key.\n\nAt the back of the chamber, a massive chest sits on a raised dais. Silver chains bind it closed, and silver runes ward its surface. This is no ordinary lock.\n\nSomething stirs within one of the sealed sarcophagi. Stone grinds against stone.",
+      "short_description": "An ancient crypt. Blue candles burn with cold light, and the dead do not rest peacefully here.",
+      "exits": {
+        "west": "flooded_cellar"
+      },
+      "items": ["crypt_key"],
+      "enemy_id": "skeleton_warrior",
+      "chest": {
+        "id": "chest_crypt_01",
+        "state": "locked",
+        "key_required": "crypt_key",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["executioners_sword", "scale_mail", "fireball_scroll"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "throne_room_approach",
+      "name": "The Throne Room Approach",
+      "description": "A grand staircase sweeps upward before you, each step carved from a single block of black marble veined with red. Once, red carpet ran up the center, but it has rotted away to ragged strips that cling to the stone like dried skin.\n\nStatues flank the stairs - knights in full plate, their stone visages frozen in expressions of eternal vigilance. But something is wrong with them. As you climb, you realize each statue bears wounds: a missing arm here, a cracked helm there, a spear through the chest of another. These aren't honoring the victorious. These memorialize the fallen.\n\nAt the top of the stairs, massive double doors of black iron stand closed. They are carved with scenes of conquest and slaughter - armies falling before a single figure, cities burning, prisoners in chains. In the center of each door is half of a face, and when the doors close, the face becomes whole. It wears a crown of thorns and a smile of infinite cruelty.\n\nRed light seeps from beneath the doors like blood pooling on the marble. From beyond, you hear rhythmic pounding - a heartbeat? War drums? Something waits within.\n\nA hooded figure blocks your path, crackling with dark energy.",
+      "short_description": "The grand staircase to the throne room. Black marble steps lead to massive iron doors that pulse with red light.",
+      "exits": {
+        "south": "corridor_of_whispers",
+        "north": "boss_lair",
+        "east": "trap_corridor",
+        "west": "golem_chamber"
+      },
+      "items": ["spell_scroll", "greater_health_potion"],
+      "enemy_id": "dark_mage",
+      "chest": null,
+      "locked_exits": {
+        "north": "crypt_key"
+      }
+    },
+    {
+      "id": "hidden_alcove",
+      "name": "The Hidden Alcove",
+      "description": "Behind the false wall lies a secret chamber, untouched by the ages. The air here is different - dry and still, preserved by some ancient enchantment. Dust lies thick on every surface, but it is the dust of decades, not centuries.\n\nShelves line the walls, filled with glass bottles of colored liquids, leather-bound books, and strange artifacts. Scrolls are stacked in neat piles, their wax seals unbroken. Whoever hid here was preparing for something - or hiding from something.\n\nIn the corner, a skeleton sits slumped against the wall. It wears the rotted remains of a scholar's robe, and its bony fingers still clutch a leather satchel. A quill pen lies nearby, and sheets of parchment are scattered around - the final writings of whoever this was.\n\nA narrow passage to the west leads to a grotto filled with strange starlight.\n\nYou pick up one of the pages. The handwriting is frantic, increasingly wild:\n\n'Day 15 - The sounds have stopped. I dare not check. The supplies will last another month if I ration carefully...'\n\n'Day 23 - Something scratched at the wall today. It knows I'm here...'\n\n'Day 31 - I can hear him laughing. The Warlord laughs and the dead dance...'\n\nThe final page is just one word, written over and over: 'HUNGRY HUNGRY HUNGRY HUNGRY'",
+      "short_description": "A hidden alcove behind a false wall. Potions and scrolls line dusty shelves, and a skeleton clutches its final writings.",
+      "exits": {
+        "east": "corridor_of_whispers",
+        "west": "starlight_fountain"
+      },
+      "items": ["health_potion", "greater_health_potion", "supreme_health_potion", "spell_scroll", "fireball_scroll"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "trap_corridor",
+      "name": "The Trap Corridor",
+      "description": "One step into this corridor and you freeze. The floor ahead is a deadly checkerboard of pressure plates, each one a slightly different shade of stone. Some are obviously depressed, triggered long ago. Others wait with patient malice.\n\nThe walls are honeycombbed with small holes - dart launchers, judging by the tiny feathered shafts embedded in the opposite wall. Scorch marks blacken large sections of floor and ceiling where gouts of flame have erupted. The air still smells faintly of burnt flesh.\n\nSkeletons litter the corridor, sprawled in the positions of their deaths. One is pinned to the wall by a dozen darts. Another is a charred heap of blackened bones. A third seems to have made it almost to the end before a blade trap removed its head - the skull sits several feet away, grinning at its own body.\n\nYet someone has been through here. A narrow path is marked in chalk - a safe route winding between the pressure plates. The marks are fresh.\n\nAt the end of the corridor, past the gauntlet of death, a chest gleams with promise.",
+      "short_description": "A corridor riddled with deadly traps. Skeletons mark the fate of those who stepped wrong. A chalk path marks the way.",
+      "exits": {
+        "west": "throne_room_approach",
+        "south": "spider_lair"
+      },
+      "items": ["greater_health_potion", "antidote"],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_trap_01",
+        "state": "trapped",
+        "trap_damage": 20,
+        "loot_tier": "rare",
+        "fixed_loot": ["flamberge", "plate_armor", "supreme_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "spider_lair",
+      "name": "The Spider's Lair",
+      "description": "Webs. Everywhere, webs. They cover the walls, hang from the ceiling in thick curtains, stretch across the floor in sticky traps. Your torch reflects off thousands of dewdrops caught in the silk, making the chamber glitter like it's filled with diamonds.\n\nCocoons hang from the ceiling - some small, some disturbingly human-sized. Most are old and dried, but a few still twitch with faint movement. Not all the victims are dead yet.\n\nThe webs are thick enough to muffle sound, creating an oppressive silence broken only by the faint skittering of countless legs. You can't see them, but you know they're watching. Waiting.\n\nIn the center of the chamber, a massive web stretches between two pillars. At its heart sits a chest, somehow placed there as if in offering. A trap? A taunt? The silken strands around it vibrate slightly, as if something approaches.\n\nYou feel eyes on you. Many, many eyes.",
+      "short_description": "A chamber choked with webs. Cocoons hang from the ceiling, and something massive lurks in the silk.",
+      "exits": {
+        "north": "trap_corridor",
+        "east": "forgotten_chapel"
+      },
+      "items": ["antidote", "health_potion"],
+      "enemy_id": "giant_spider",
+      "chest": {
+        "id": "chest_spider_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "uncommon",
+        "fixed_loot": ["spider_silk_armor", "venom_blade", "antidote"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "forgotten_chapel",
+      "name": "The Forgotten Chapel",
+      "description": "This was once a place of worship, though to which god you cannot say. The altar has been defaced, holy symbols scratched away or painted over with blasphemous runes. Pews lie overturned and broken, some burned to charcoal.\n\nStained glass windows depict scenes of light and salvation, but they've been cracked and shattered. Through the gaps, you can see only darkness - this chapel is buried deep underground, with no sky to illuminate its windows.\n\nDespite the desecration, something holy lingers here. The air feels cleaner, and your wounds ache less. A font of holy water still stands near the entrance, though its contents are low.\n\nBehind the altar, a narrow door leads to what must have been the priest's chambers. The door is scorched, as if someone tried to burn their way in - or out.",
+      "short_description": "A desecrated chapel. Holy symbols have been defaced, but a trace of sanctity remains.",
+      "exits": {
+        "west": "spider_lair",
+        "south": "priests_quarters"
+      },
+      "items": ["holy_water", "health_potion"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {},
+      "is_safe": true
+    },
+    {
+      "id": "priests_quarters",
+      "name": "The Priest's Quarters",
+      "description": "A small, austere room that once housed a holy man. A simple cot stands against one wall, its blankets rotted to threads. A prayer book lies open on a small desk, its pages covered in desperate pleas for divine intervention.\n\nThe walls are covered in writings - not mad scrawlings, but careful, deliberate prayers written in a shaking hand. The priest knew what was coming and spent his final hours seeking salvation.\n\nA locked chest sits in the corner, blessed symbols carved into its surface. Unlike everything else in this dungeon, it shows no signs of tampering. Whatever is inside, the dungeon's evil could not touch it.\n\nThe priest's skeleton lies before the altar he built in the corner, hands still clasped in prayer. In death, he found the peace the dungeon denied him in life.",
+      "short_description": "The priest's quarters. A skeleton kneels before a small altar, forever praying.",
+      "exits": {
+        "north": "forgotten_chapel"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_priest_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["blessed_mace", "holy_shield", "supreme_health_potion", "holy_water"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "boss_lair",
+      "name": "The Warlord's Throne Room",
+      "description": "The doors swing open, and you enter the heart of darkness.\n\nThe throne room is vast - a cathedral of evil. Pillars of black stone rise like petrified trees, their surfaces carved with screaming faces and writhing bodies. Crimson light pulses from runes inscribed on every surface, bathing everything in the color of fresh blood.\n\nBanners hang from the ceiling, each bearing a different sigil - the conquered kingdoms whose rulers now serve as decorations. Their skulls ring the room, mounted on iron spikes, eye sockets flickering with trapped souls that cannot find rest.\n\nAt the far end of the room, upon a throne of fused bones and black iron, sits the Dungeon Warlord.\n\nHe is massive - eight feet of armored malevolence. His plate armor is black as a starless void, trimmed with gold that gleams like captured fire. A crown of twisted iron thorns rests upon his helm. In one gauntleted fist he holds a massive sword that seems to drink the light.\n\nWhen he speaks, his voice is the rumble of distant thunder, the grinding of gravestones.\n\n'So. Another hero comes to die. I have waited centuries for a worthy foe, and they send me... you.'\n\nHe rises from his throne. The room trembles.\n\n'Come then, little warrior. Let me add your skull to my collection.'\n\nThere is no retreat. There is only victory or death.",
+      "short_description": "The Warlord's throne room. Crimson light pulses, skulls line the walls, and death incarnate rises to meet you.",
+      "exits": {
+        "south": "throne_room_approach"
+      },
+      "items": [],
+      "enemy_id": "dungeon_warlord",
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "crystal_fountain",
+      "name": "The Crystal Fountain Chamber",
+      "description": "You enter a circular chamber of pristine white marble, untouched by the decay that afflicts the rest of the dungeon. In the center rises a magnificent fountain carved from pure crystal, still flowing with clear water that sparkles with inner light.\n\nThe water seems to come from nowhere - there are no pipes, no channels, just an endless flow from the crystal spout. The liquid catches the light and throws rainbows across the white walls.\n\nAs you approach, you feel a strange tingling sensation. The fountain radiates magic - but whether benevolent or malicious, you cannot tell. Some fountains in ancient places grant boons to those who drink. Others... do not.\n\nA worn plaque at the fountain's base reads:\n'DRINK DEEP AND BE TRANSFORMED'\n\nDo you dare?",
+      "short_description": "A pristine chamber with a crystal fountain. Its magical waters beckon you to drink.",
+      "exits": {
+        "south": "corridor_of_whispers"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {},
+      "has_fountain": true,
+      "fountain_effects": ["heal", "damage", "buff_attack", "buff_defense", "gold", "random"]
+    },
+    {
+      "id": "blood_fountain",
+      "name": "The Fountain of Blood",
+      "description": "The stench hits you first - iron and rot, the unmistakable smell of blood. This chamber is carved from red-veined black stone, and in its center sits a fountain that makes your stomach turn.\n\nInstead of water, thick crimson blood pours from a sculpture of intertwined serpents. The blood flows endlessly into a basin that never overflows, then... vanishes. Where does it come from? Where does it go? You don't want to know.\n\nDespite its horrific appearance, you sense power here. Dark power, yes, but power nonetheless. Warriors of old came to places like this to gain strength for battle, paying the price in blood - theirs or others'.\n\nAnother plaque, this one stained red:\n'BLOOD FOR BLOOD. STRENGTH FOR SACRIFICE.'\n\nThe fountain waits.",
+      "short_description": "A dark chamber with a fountain of blood. Dark power flows through this cursed place.",
+      "exits": {
+        "east": "flooded_cellar"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {},
+      "has_fountain": true,
+      "fountain_effects": ["major_heal", "major_damage", "buff_attack_large", "curse", "gold_large", "random"]
+    },
+    {
+      "id": "starlight_fountain",
+      "name": "The Starlight Grotto",
+      "description": "You emerge into a natural cavern that takes your breath away. The ceiling rises high above, covered in thousands of glowing crystals that create a perfect replica of the night sky. Constellations you recognize and some you don't twinkle in the darkness.\n\nIn the center of this underground heaven, a fountain of silver liquid flows upward - defying gravity itself. The liquid rises in a gentle spiral before falling back into a pool that reflects the false stars above.\n\nThis place feels sacred. Ancient. The air hums with primordial magic, and you feel like the first mortal to stand here in a thousand years.\n\nUnlike the other fountains, this one bears no plaque. It needs no warning. You can feel in your bones that whatever this fountain grants will be significant.\n\nThe silver water calls to you.",
+      "short_description": "A breathtaking grotto with a starlit ceiling and a fountain of silver that flows upward.",
+      "exits": {
+        "west": "hidden_alcove"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_starlight_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "legendary",
+        "fixed_loot": ["starforged_blade", "celestial_armor", "meteor_scroll"],
+        "opened": false
+      },
+      "locked_exits": {},
+      "has_fountain": true,
+      "fountain_effects": ["full_heal", "level_up", "random_weapon", "random_armor", "gold_massive", "curse_or_blessing"]
+    },
+    {
+      "id": "golem_chamber",
+      "name": "The Golem's Chamber",
+      "description": "You push through a concealed door and find yourself in a workshop of horrors. This is where the dungeon's guardians were made.\n\nHuge stone tables are covered in tools of construction and destruction - chisels and hammers, but also scalpels and bone saws. Diagrams cover the walls, showing the assembly of creatures from parts both mineral and organic.\n\nIn alcoves around the room stand half-finished golems - constructs of stone and metal waiting for the animating spark. Some are missing limbs. Others lack heads. All are terrifying.\n\nBut one is complete. It stands in the center of the room, twice your height, carved from solid granite. Runes glow along its arms and torso. As you enter, its massive head turns toward you with a grinding of stone.\n\nIt raises fists the size of anvils.\n\n'INTRUDER,' it rumbles, and the room shakes. 'DESTROY.'",
+      "short_description": "A golem workshop. Half-finished constructs line the walls, and a massive stone guardian awakens at your approach.",
+      "exits": {
+        "west": "throne_room_approach"
+      },
+      "items": [],
+      "enemy_id": "stone_golem",
+      "chest": {
+        "id": "chest_golem_01",
+        "state": "mimic",
+        "trap_damage": 0,
+        "loot_tier": null,
+        "fixed_loot": [],
+        "opened": false
+      },
+      "locked_exits": {}
+    }
+  ]
+}
