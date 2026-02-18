@@ -1,4 +1,5 @@
 """Inventory system - Handles item pickup, drop, use, and equip."""
+import random
 from typing import TYPE_CHECKING, Tuple
 
 if TYPE_CHECKING:
@@ -155,6 +156,7 @@ class InventorySystem:
         if effect_type == 'heal':
             healed = player.heal(effect_value)
             message = f"You used {name} and restored {healed} HP."
+
         elif effect_type == 'damage':
             # Used in combat on enemy
             if game_state.in_combat and game_state.current_enemy:
@@ -162,8 +164,86 @@ class InventorySystem:
                 message = f"You used {name} and dealt {damage} damage to {game_state.current_enemy.name}!"
             else:
                 return False, "You can only use this in combat."
+
+        elif effect_type == 'lifesteal':
+            # Damage enemy and heal self
+            if game_state.in_combat and game_state.current_enemy:
+                damage = game_state.current_enemy.take_damage(effect_value)
+                healed = player.heal(effect_value)
+                message = f"You used {name}! Drained {damage} life from {game_state.current_enemy.name} and restored {healed} HP!"
+            else:
+                return False, "You can only use this in combat."
+
+        elif effect_type == 'teleport':
+            # Random teleport to any visited room
+            visited_rooms = [r_id for r_id, room in game_state.dungeon.rooms.items() if room.visited]
+            if visited_rooms:
+                new_room = random.choice(visited_rooms)
+                game_state.current_room_id = new_room
+                game_state.in_combat = False
+                game_state.current_enemy = None
+                room_name = game_state.current_room.name
+                message = f"You tear open a rift in space! Reality twists and bends... You find yourself in {room_name}!"
+            else:
+                message = f"You used {name} but nothing happened... the magic fizzles."
+
+        elif effect_type == 'recall':
+            # Teleport back to village
+            game_state.current_room_id = "village_square"
+            game_state.in_combat = False
+            game_state.current_enemy = None
+            message = f"A shimmering portal opens before you! You step through and emerge in Thornwick Village, safe at last."
+
+        elif effect_type == 'timestop':
+            # Guaranteed escape from combat
+            if game_state.in_combat:
+                game_state.in_combat = False
+                game_state.current_enemy = None
+                message = f"Time FREEZES! The world turns grey and silent. You walk calmly away from danger as your enemy stands frozen in mid-strike. Time resumes behind you."
+            else:
+                message = f"You used {name}, but there was nothing to escape from. The magic fades unused."
+
+        elif effect_type == 'chaos':
+            # Random effect!
+            chaos_effects = ['heal_big', 'heal_small', 'damage_big', 'damage_small', 'teleport', 'gold', 'nothing', 'hurt_self']
+            effect = random.choice(chaos_effects)
+
+            if effect == 'heal_big':
+                healed = player.heal(100)
+                message = f"CHAOS MAGIC surges! A wave of healing energy washes over you! Restored {healed} HP!"
+            elif effect == 'heal_small':
+                healed = player.heal(25)
+                message = f"Chaos magic fizzles... but you feel slightly better. Restored {healed} HP."
+            elif effect == 'damage_big' and game_state.in_combat and game_state.current_enemy:
+                damage = game_state.current_enemy.take_damage(80)
+                message = f"CHAOS ERUPTS! Reality tears apart around your enemy! {damage} damage!"
+            elif effect == 'damage_small' and game_state.in_combat and game_state.current_enemy:
+                damage = game_state.current_enemy.take_damage(20)
+                message = f"Chaos sparks! A small explosion hits your enemy for {damage} damage."
+            elif effect == 'teleport':
+                visited_rooms = [r_id for r_id, room in game_state.dungeon.rooms.items() if room.visited]
+                if visited_rooms:
+                    new_room = random.choice(visited_rooms)
+                    game_state.current_room_id = new_room
+                    game_state.in_combat = False
+                    game_state.current_enemy = None
+                    message = f"CHAOS TELEPORT! The world spins and you appear somewhere else entirely!"
+                else:
+                    message = f"Chaos swirls around you... then dissipates harmlessly."
+            elif effect == 'gold':
+                gold_gained = random.randint(10, 100)
+                player.gold += gold_gained
+                message = f"CHAOS becomes ORDER! Gold coins materialize from thin air! +{gold_gained} gold!"
+            elif effect == 'hurt_self':
+                damage = random.randint(10, 30)
+                player.take_damage(damage)
+                message = f"CHAOS BACKFIRES! The magic turns against you! You take {damage} damage!"
+            else:
+                message = f"Chaos swirls... and fades. Nothing happens. How anticlimactic."
+
         elif effect_type == 'cure':
             message = f"You used {name} and feel refreshed."
+
         else:
             message = f"You used {name}."
 

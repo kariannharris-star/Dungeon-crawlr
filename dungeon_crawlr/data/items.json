@@ -882,6 +882,138 @@
       "item_type": "key",
       "value": 0,
       "weight": 1
+    },
+    {
+      "id": "teleport_scroll",
+      "name": "Scroll of Random Teleportation",
+      "description": "A chaotic scroll that tears a hole in space. Where you end up is anyone's guess - it could save your life or doom you to somewhere worse.",
+      "item_type": "consumable",
+      "effect_type": "teleport",
+      "effect_value": 0,
+      "value": 50,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "recall_scroll",
+      "name": "Scroll of Town Portal",
+      "description": "A blessed scroll that creates a shimmering portal back to Thornwick Village. The magic is one-way - you'll have to walk back into the dungeon.",
+      "item_type": "consumable",
+      "effect_type": "recall",
+      "effect_value": 0,
+      "value": 75,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "phase_scroll",
+      "name": "Scroll of Phase Walk",
+      "description": "This scroll allows you to step briefly into the ethereal plane, passing through walls to an adjacent room. Use wisely - some walls exist for good reason.",
+      "item_type": "consumable",
+      "effect_type": "phase",
+      "effect_value": 0,
+      "value": 100,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "timestop_scroll",
+      "name": "Scroll of Frozen Moment",
+      "description": "Time itself obeys this scroll. For a single frozen moment, you can act while the world stands still - guaranteed escape from any battle.",
+      "item_type": "consumable",
+      "effect_type": "timestop",
+      "effect_value": 0,
+      "value": 150,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "summon_scroll",
+      "name": "Scroll of Skeletal Ally",
+      "description": "Dark magic binds a skeleton warrior to fight alongside you for one battle. The undead serves without question - this time.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 45,
+      "value": 80,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "vampiric_scroll",
+      "name": "Scroll of Life Drain",
+      "description": "Forbidden blood magic that tears the life force from your enemy and feeds it to you. Heals as it harms.",
+      "item_type": "consumable",
+      "effect_type": "lifesteal",
+      "effect_value": 35,
+      "value": 90,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "earthquake_scroll",
+      "name": "Scroll of Earthquake",
+      "description": "The earth itself becomes your weapon. Devastating to all enemies, but use with caution in unstable areas...",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 70,
+      "value": 110,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "polymorph_scroll",
+      "name": "Scroll of Polymorph",
+      "description": "Transform your enemy into a harmless creature for easy defeat. Warning: effects may be temporary. Or permanent. Magic is unpredictable.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 50,
+      "value": 85,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "wrath_scroll",
+      "name": "Scroll of Divine Wrath",
+      "description": "Call down the fury of the heavens upon the unholy. Holy fire and righteous thunder smite your foes with extreme prejudice.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 90,
+      "value": 130,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "shadow_scroll",
+      "name": "Scroll of Shadow Step",
+      "description": "Become one with the shadows, striking from darkness. Guaranteed critical hit that ignores all armor.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 55,
+      "value": 95,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "chaos_scroll",
+      "name": "Scroll of Chaos",
+      "description": "Pure chaos magic - literally anything could happen. Heal, harm, teleport, summon, transform... roll the dice with reality itself.",
+      "item_type": "consumable",
+      "effect_type": "chaos",
+      "effect_value": 0,
+      "value": 60,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "portal_stone",
+      "name": "Portal Stone",
+      "description": "A smooth stone that pulses with spatial magic. Crush it to create a temporary portal to a room you've visited before. Single use.",
+      "item_type": "consumable",
+      "effect_type": "portal",
+      "effect_value": 0,
+      "value": 120,
+      "weight": 1,
+      "stackable": true
     }
   ]
 }
