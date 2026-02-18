@@ -266,10 +266,15 @@ class Display:
             print("  Your inventory is empty.")
         else:
             print(cls.color("  CARRIED ITEMS:", 'bold'))
-            for item_id in player.inventory:
+            print(cls.color("  (Use slot number: 'drop 1', 'use 2', 'equip 3')", 'dim'))
+            print()
+            for slot, item_id in enumerate(player.inventory, 1):
                 item_data = items_data.get(item_id, {})
                 name = item_data.get('name', item_id)
                 item_type = item_data.get('item_type', 'misc')
+
+                # Slot number
+                slot_num = cls.color(f"[{slot}]", 'white')
 
                 # Mark equipped items
                 equipped = ""
@@ -281,21 +286,21 @@ class Display:
                 # Show stats
                 if item_type == 'weapon':
                     damage = item_data.get('damage', 0)
-                    print(f"    - {cls.color(name, 'yellow')} (+{damage} damage){equipped}")
+                    print(f"    {slot_num} {cls.color(name, 'yellow')} (+{damage} damage){equipped}")
                 elif item_type == 'armor':
                     defense = item_data.get('defense_bonus', 0)
-                    print(f"    - {cls.color(name, 'cyan')} (+{defense} defense){equipped}")
+                    print(f"    {slot_num} {cls.color(name, 'cyan')} (+{defense} defense){equipped}")
                 elif item_type == 'consumable':
                     effect = item_data.get('effect_type', '')
                     value = item_data.get('effect_value', 0)
                     if effect == 'heal':
-                        print(f"    - {cls.color(name, 'green')} (restores {value} HP)")
+                        print(f"    {slot_num} {cls.color(name, 'green')} (restores {value} HP)")
                     elif effect == 'damage':
-                        print(f"    - {cls.color(name, 'magenta')} (deals {value} magic damage)")
+                        print(f"    {slot_num} {cls.color(name, 'magenta')} (deals {value} magic damage)")
                     else:
-                        print(f"    - {cls.color(name, 'green')}")
+                        print(f"    {slot_num} {cls.color(name, 'green')}")
                 else:
-                    print(f"    - {name}")
+                    print(f"    {slot_num} {name}")
 
         print()
         print(cls.color("  EQUIPMENT:", 'bold'))

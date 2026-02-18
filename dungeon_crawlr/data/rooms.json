@@ -88,7 +88,7 @@
         "east": "guard_barracks",
         "up": "dungeon_entrance"
       },
-      "items": ["wooden_club"],
+      "items": [],
       "enemy_id": null,
       "chest": null,
       "locked_exits": {}
@@ -102,7 +102,7 @@
         "west": "entrance_hall",
         "south": "prison_cells"
       },
-      "items": ["rusty_dagger", "health_potion"],
+      "items": ["health_potion"],
       "enemy_id": "giant_rat",
       "chest": null,
       "locked_exits": {}
@@ -116,7 +116,7 @@
         "north": "guard_barracks",
         "down": "torture_chamber"
       },
-      "items": ["bone_knife"],
+      "items": [],
       "enemy_id": "skeleton_warrior",
       "chest": {
         "id": "chest_prison_01",
@@ -237,7 +237,7 @@
         "south": "flooded_cellar",
         "east": "forgotten_library"
       },
-      "items": ["leather_armor", "rusted_sword"],
+      "items": ["leather_armor"],
       "enemy_id": "skeleton_warrior",
       "chest": {
         "id": "chest_armory_01",
@@ -258,7 +258,7 @@
         "west": "armory_ruins",
         "north": "ritual_chamber"
       },
-      "items": ["spell_scroll", "health_potion"],
+      "items": ["health_potion"],
       "enemy_id": "dark_mage",
       "chest": {
         "id": "chest_library_01",
@@ -280,7 +280,7 @@
         "south": "forgotten_library",
         "east": "throne_room_approach"
       },
-      "items": ["fireball_scroll", "lightning_scroll", "antidote"],
+      "items": ["antidote"],
       "enemy_id": null,
       "chest": {
         "id": "chest_ritual_01",
@@ -397,7 +397,7 @@
         "east": "corridor_of_whispers",
         "west": "starlight_fountain"
       },
-      "items": ["health_potion", "greater_health_potion", "supreme_health_potion", "spell_scroll", "fireball_scroll"],
+      "items": ["greater_health_potion", "spell_scroll"],
       "enemy_id": null,
       "chest": null,
       "locked_exits": {}

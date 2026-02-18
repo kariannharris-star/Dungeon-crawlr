@@ -72,6 +72,26 @@ def get_player_name() -> str:
             return "Unknown Hero"
 
 
+def get_item_by_slot_or_name(game_state: GameState, args: list) -> str:
+    """
+    Get item ID from slot number (e.g., '1', '2') or item name.
+    Returns the item_id or the original name if not a slot number.
+    """
+    if not args:
+        return ""
+
+    # Check if first arg is a number (slot)
+    try:
+        slot = int(args[0])
+        if game_state.player and 1 <= slot <= len(game_state.player.inventory):
+            return game_state.player.inventory[slot - 1]
+    except ValueError:
+        pass
+
+    # Not a number, return as item name
+    return get_item_name_from_args(args)
+
+
 def handle_exploration_command(game_state: GameState, command: str, args: list) -> bool:
     """
     Handle a command during exploration.
@@ -137,9 +157,9 @@ def handle_exploration_command(game_state: GameState, command: str, args: list) 
 
     elif command == 'drop':
         if not args:
-            Display.show_error("Drop what?")
+            Display.show_error("Drop what? Try 'drop <item>' or 'drop <slot#>'")
             return True
-        item_name = get_item_name_from_args(args)
+        item_name = get_item_by_slot_or_name(game_state, args)
         success, message = InventorySystem.drop_item(game_state, item_name)
         if success:
             Display.show_success(message)
@@ -149,9 +169,9 @@ def handle_exploration_command(game_state: GameState, command: str, args: list) 
 
     elif command == 'use':
         if not args:
-            Display.show_error("Use what?")
+            Display.show_error("Use what? Try 'use <item>' or 'use <slot#>'")
             return True
-        item_name = get_item_name_from_args(args)
+        item_name = get_item_by_slot_or_name(game_state, args)
         success, message = InventorySystem.use_item(game_state, item_name)
         if success:
             Display.show_success(message)
@@ -161,9 +181,9 @@ def handle_exploration_command(game_state: GameState, command: str, args: list) 
 
     elif command == 'equip':
         if not args:
-            Display.show_error("Equip what?")
+            Display.show_error("Equip what? Try 'equip <item>' or 'equip <slot#>'")
             return True
-        item_name = get_item_name_from_args(args)
+        item_name = get_item_by_slot_or_name(game_state, args)
         success, message = InventorySystem.equip_item(game_state, item_name)
         if success:
             Display.show_success(message)
