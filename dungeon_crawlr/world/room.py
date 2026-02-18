@@ -16,6 +16,7 @@ class Room:
     chest: Optional[dict] = None
     visited: bool = False
     locked_exits: dict = field(default_factory=dict)
+    data: dict = field(default_factory=dict)  # Store original data for lore_objects etc
 
     def get_exit(self, direction: str) -> Optional[str]:
         """Get the room ID for a given exit direction."""
@@ -101,5 +102,6 @@ class Room:
             enemy_id=data.get('enemy_id'),
             chest=data.get('chest', {}).copy() if data.get('chest') else None,
             visited=data.get('visited', False),
-            locked_exits=data.get('locked_exits', {}).copy()
+            locked_exits=data.get('locked_exits', {}).copy(),
+            data=data  # Store full data for lore_objects and other custom fields
         )

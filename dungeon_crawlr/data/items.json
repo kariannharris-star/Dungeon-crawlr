@@ -765,6 +765,123 @@
       "item_type": "misc",
       "value": 50,
       "weight": 1
+    },
+    {
+      "id": "frost_blade",
+      "name": "Frost Blade",
+      "description": "A sword forged from eternal ice, cold enough to freeze blood on contact. Mist rises from the blade constantly, and frost spreads wherever it strikes.",
+      "item_type": "weapon",
+      "damage": 14,
+      "value": 120,
+      "weight": 4
+    },
+    {
+      "id": "winter_cloak",
+      "name": "Winter Cloak",
+      "description": "A cloak woven from captured snowflakes and northern winds. It keeps you warm in the coldest depths and chills those who strike you.",
+      "item_type": "armor",
+      "defense_bonus": 6,
+      "value": 140,
+      "weight": 2
+    },
+    {
+      "id": "miners_pickaxe",
+      "name": "Miner's Pickaxe",
+      "description": "A well-worn pickaxe that has seen centuries of use. The head is made of a strange purple-veined metal that hums with power.",
+      "item_type": "weapon",
+      "damage": 10,
+      "value": 45,
+      "weight": 5
+    },
+    {
+      "id": "void_shard",
+      "name": "Void Shard",
+      "description": "A fragment of crystallized nothingness that hurts to look at. It radiates anti-light and whispers of oblivion.",
+      "item_type": "misc",
+      "value": 200,
+      "weight": 1
+    },
+    {
+      "id": "spider_queens_fang",
+      "name": "Spider Queen's Fang",
+      "description": "A massive fang from the Spider Queen herself, still dripping with royal venom. A single scratch means certain death.",
+      "item_type": "weapon",
+      "damage": 16,
+      "value": 180,
+      "weight": 2
+    },
+    {
+      "id": "web_weaver_armor",
+      "name": "Web Weaver Armor",
+      "description": "Armor crafted from the Spider Queen's own silk, impossibly light yet strong as steel. It shimmers with an oily iridescence.",
+      "item_type": "armor",
+      "defense_bonus": 8,
+      "value": 200,
+      "weight": 3
+    },
+    {
+      "id": "bone_crusher",
+      "name": "Bone Crusher",
+      "description": "A massive maul made from fused bones and dark iron. It was designed to shatter other undead, and it excels at its purpose.",
+      "item_type": "weapon",
+      "damage": 16,
+      "value": 150,
+      "weight": 8
+    },
+    {
+      "id": "skull_helm",
+      "name": "Skull Helm",
+      "description": "A helm crafted from a giant's skull, reinforced with iron bands. The empty eye sockets glow faintly when danger approaches.",
+      "item_type": "armor",
+      "defense_bonus": 7,
+      "value": 130,
+      "weight": 5
+    },
+    {
+      "id": "dragons_tooth",
+      "name": "Dragon's Tooth",
+      "description": "A dagger carved from a frost dragon's fang, eternally cold. It cuts through armor like paper and freezes wounds closed.",
+      "item_type": "weapon",
+      "damage": 13,
+      "value": 200,
+      "weight": 1
+    },
+    {
+      "id": "crown_of_madness",
+      "name": "Crown of Madness",
+      "description": "A crown of twisted metal and purple crystal that whispers promises of power. Wearing it grants terrible strength... at a terrible cost.",
+      "item_type": "armor",
+      "defense_bonus": 10,
+      "value": 500,
+      "weight": 2
+    },
+    {
+      "id": "wardens_blade",
+      "name": "Warden's Blade",
+      "description": "The personal sword of the dungeon's warden, stained with the blood of countless executions. It carries the weight of guilt.",
+      "item_type": "weapon",
+      "damage": 12,
+      "value": 90,
+      "weight": 4
+    },
+    {
+      "id": "alchemists_fire",
+      "name": "Alchemist's Fire",
+      "description": "A volatile concoction that bursts into flames on impact. Handle with extreme care - or throw at enemies with extreme prejudice.",
+      "item_type": "consumable",
+      "effect_type": "damage",
+      "effect_value": 60,
+      "value": 80,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "master_key",
+      "name": "Master Key",
+      "description": "The warden's master key, capable of opening any lock in the dungeon. Its teeth are worn from centuries of use.",
+      "item_type": "key",
+      "value": 0,
+      "weight": 1
     }
   ]
 }

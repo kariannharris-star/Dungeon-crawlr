@@ -81,6 +81,11 @@
     {
       "id": "entrance_hall",
       "name": "The Entrance Hall",
+      "lore_objects": {
+        "tapestries": "The tapestries depict the rise of Lord Valdric, once a noble king who defended his people against darkness. The final panel shows his transformation - accepting the crown of the Warlord to gain the power to protect his kingdom. The road to hell, paved with good intentions.",
+        "mosaic": "The worn mosaic shows a map of the kingdom that once stood here. Cities now dust, rivers long dried, people forgotten. Only the dungeon remains - a tomb for a fallen civilization.",
+        "pillars": "Names are carved into the pillars - hundreds of them, cramped and overlapping. Prisoners? Victims? Or perhaps the names of those who came to challenge the Warlord. None of them left."
+      },
       "description": "You stand in what was once a grand entrance hall, now a monument to decay and forgotten glory. Massive stone pillars rise into shadow, their surfaces crawling with cracks like ancient veins. Tattered tapestries hang from rusted iron rods - you can barely make out scenes of battles and coronations through the moth-eaten holes and water stains.\n\nThe floor is a mosaic of colored tiles, though centuries of boots and claws have worn most of the pattern away. Dust motes drift through pale shafts of light that filter down from somewhere far above. The air is thick and stale, carrying the musty scent of ages past and something else - something coppery, like old blood.\n\nTo the north, a heavy iron door stands slightly ajar, strange runes carved into its surface pulsing with a faint, sickly green light. Beyond it, you hear the distant sound of dripping water.\n\nStairs behind you lead back up to the dungeon entrance and the village beyond.",
       "short_description": "The ruined entrance hall. Tattered tapestries hang from the walls, and a heavy iron door leads north.",
       "exits": {
@@ -114,7 +119,8 @@
       "short_description": "The prison block. Skeletal prisoners remain in their cells, and one cell has been violently broken open.",
       "exits": {
         "north": "guard_barracks",
-        "down": "torture_chamber"
+        "down": "torture_chamber",
+        "east": "wardens_office"
       },
       "items": [],
       "enemy_id": "skeleton_warrior",
@@ -159,7 +165,8 @@
         "south": "entrance_hall",
         "north": "corridor_of_whispers",
         "east": "armory_ruins",
-        "west": "collapsed_tunnel"
+        "west": "collapsed_tunnel",
+        "down": "echoing_chasm"
       },
       "items": ["health_potion"],
       "enemy_id": "goblin_scout",
@@ -256,7 +263,8 @@
       "short_description": "A vast library filled with ancient books. Skeletal scholars sit at dusty desks, forever studying.",
       "exits": {
         "west": "armory_ruins",
-        "north": "ritual_chamber"
+        "north": "ritual_chamber",
+        "east": "alchemists_lab"
       },
       "items": ["health_potion"],
       "enemy_id": "dark_mage",
@@ -322,7 +330,8 @@
       "short_description": "A vast underground lake. Ruins glitter beneath the still water, and something massive sleeps in the depths.",
       "exits": {
         "north": "flooded_cellar",
-        "east": "lake_island"
+        "east": "lake_island",
+        "south": "mushroom_grotto"
       },
       "items": ["health_potion"],
       "enemy_id": null,
@@ -352,10 +361,17 @@
     {
       "id": "crypt_chamber",
       "name": "The Crypt Chamber",
+      "lore_objects": {
+        "sarcophagi": "The sarcophagi bear names you don't recognize - nobles and warriors from a kingdom that no longer exists. One inscription reads: 'Lord Varen, who served faithfully until the end. May his loyalty be rewarded in death as it was not in life.'",
+        "runes": "The runes form a binding circle, designed to keep something IN rather than keep things OUT. Whatever was summoned here, the casters wanted to make sure it couldn't escape. The dried blood in the channels suggests the binding required... sacrifice.",
+        "candles": "The candles burn with flames that give no heat and cast no shadows. When you try to blow one out, it simply reforms. These flames are not fire - they are captured souls, forever burning."
+      },
       "description": "You emerge from the water into a chamber of death. Stone sarcophagi line the walls in recessed alcoves, their lids carved with the likenesses of the dead within - proud warriors, stern priests, noble ladies. All wear expressions of peaceful repose, but the peace is a lie.\n\nCandles burn in iron sconces, but their flames are wrong - cold, blue-white, casting no warmth. They illuminate the chamber in shifting, ghostly light that makes the carved faces seem to move. The air is thick with the cloying sweetness of ancient decay, perfumed but not concealed.\n\nRunes are carved into the floor in a great circle, their channels filled with what looks like dried blood turned black with age. The pattern is complex, disturbing to look at directly. Your eyes keep sliding away from its center.\n\nOne sarcophagus stands open, its lid pushed aside. The interior is lined with rotted velvet and contains only dust and a single iron key.\n\nAt the back of the chamber, a massive chest sits on a raised dais. Silver chains bind it closed, and silver runes ward its surface. This is no ordinary lock.\n\nSomething stirs within one of the sealed sarcophagi. Stone grinds against stone.",
       "short_description": "An ancient crypt. Blue candles burn with cold light, and the dead do not rest peacefully here.",
       "exits": {
-        "west": "flooded_cellar"
+        "west": "flooded_cellar",
+        "down": "frozen_crypt",
+        "east": "ossuary"
       },
       "items": ["crypt_key"],
       "enemy_id": "skeleton_warrior",
@@ -379,13 +395,16 @@
         "south": "corridor_of_whispers",
         "north": "boss_lair",
         "east": "trap_corridor",
-        "west": "golem_chamber"
+        "west": "golem_chamber",
+        "up": "servants_quarters",
+        "down": "treasure_vault"
       },
-      "items": ["spell_scroll", "greater_health_potion"],
+      "items": ["greater_health_potion"],
       "enemy_id": "dark_mage",
       "chest": null,
       "locked_exits": {
-        "north": "crypt_key"
+        "north": "crypt_key",
+        "down": "master_key"
       }
     },
     {
@@ -560,6 +579,336 @@
         "trap_damage": 0,
         "loot_tier": null,
         "fixed_loot": [],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "frozen_crypt",
+      "name": "The Frozen Crypt",
+      "description": "Your breath mists in the air as you descend into this ice-bound tomb. The temperature drops so suddenly it takes your breath away. Frost coats every surface in crystalline patterns that would be beautiful if they weren't so deadly.\n\nSarcophagi line the walls, but these are different from those above - they are encased in ice inches thick, their occupants frozen in eternal preservation. Through the clouded ice, you can see faces contorted in expressions of terror. These people were frozen alive.\n\n*Crack*\n\nThe ice groans around you. Icicles hang from the ceiling like daggers, and you notice dark shapes frozen within some of them - bats? Birds? Something larger?\n\nIn the center of the chamber, a frozen throne sits upon a dais of blue ice. Someone sits upon it - a figure in ornate armor, completely encased in ice, a crown still upon their brow. A plaque at the base reads: 'HERE RESTS KING ALDRIC THE BETRAYED. MAY HIS VENGEANCE SLEEP ETERNAL.'\n\nThe ice around the throne is cracking.",
+      "short_description": "An ice-bound crypt. Frozen sarcophagi line the walls, and a king sits eternally upon a throne of ice.",
+      "exits": {
+        "up": "crypt_chamber",
+        "north": "ice_gallery"
+      },
+      "items": ["greater_health_potion"],
+      "enemy_id": "frozen_knight",
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "ice_gallery",
+      "name": "The Ice Gallery",
+      "description": "You enter a long hall where the walls themselves are made of ice - not built, but carved directly from a glacier that somehow exists beneath the earth. The ice is so clear you can see deep within it, and what you see makes your blood run colder than the air.\n\nFrozen within the walls are people. Dozens of them. Warriors in ancient armor, nobles in fine dress, servants in simple cloth. All perfectly preserved, their eyes open, their faces frozen in their final moments. Some reached toward the surface. Others seem to have accepted their fate.\n\nAs you walk, you realize the 'statues' follow you with their eyes. Not physically - they cannot move - but you feel their gaze. Their hatred. Their hunger.\n\nThe far end of the gallery opens into a vast frozen lake, its surface smooth as glass. Something massive is frozen beneath it - you can see a shadow, a shape, coiled and waiting.\n\n*The ice beneath your feet groans*",
+      "short_description": "A gallery of frozen souls. Bodies preserved in ice watch you pass with hungry eyes.",
+      "exits": {
+        "south": "frozen_crypt",
+        "east": "frozen_lake"
+      },
+      "items": ["antidote", "health_potion"],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_ice_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["frost_blade", "winter_cloak", "greater_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "frozen_lake",
+      "name": "The Frozen Lake",
+      "description": "You stand at the edge of an underground lake frozen solid. The ice stretches into darkness, perfectly smooth, perfectly clear. And perfectly terrifying - because you can see what lies beneath.\n\nA dragon.\n\nCoiled beneath the ice, scales glittering like sapphires, lies a frost wyrm of immense size. Its eyes are closed. Its chest does not move. But you cannot shake the feeling that it is not dead - merely sleeping. Waiting.\n\nAround the dragon, smaller shapes are frozen - knights who came to slay it, perhaps, now eternal companions to their would-be prey. Their weapons still gleam, tantalizingly close yet forever out of reach.\n\nAt the lake's center, a small island of rock rises above the ice. Something glitters there - gold? Gems? The dragon's hoard, left unguarded... or so it appears.\n\nThe ice is thick enough to walk on. Probably.",
+      "short_description": "A frozen underground lake. Beneath the ice, a frost dragon sleeps its eternal slumber.",
+      "exits": {
+        "west": "ice_gallery"
+      },
+      "items": [],
+      "enemy_id": "ice_wraith",
+      "chest": {
+        "id": "chest_dragon_hoard",
+        "state": "trapped",
+        "trap_damage": 30,
+        "loot_tier": "legendary",
+        "fixed_loot": ["dragons_tooth", "dragon_scale", "supreme_health_potion", "gold_coins"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "abandoned_mine",
+      "name": "The Abandoned Mine",
+      "description": "The tunnel opens into what was once a working mine. Rusted cart tracks run along the floor, disappearing into the darkness. Pickaxes and shovels lie abandoned where they fell, some still clutched in skeletal hands.\n\nThe miners found something down here. Something that made them stop digging and start dying.\n\nSupport beams creak ominously overhead. The ceiling sags in places, held up by rotting wood and desperate prayer. Cave-ins have blocked several passages, leaving only one path forward - deeper into the earth.\n\nLanterns still hang from hooks on the walls, their oil long since burned away. In their place, strange phosphorescent fungi provide a sickly green glow. The mushrooms pulse slowly, almost like breathing.\n\nSomewhere in the darkness ahead, you hear the rhythmic *tink-tink-tink* of metal striking stone. Someone - or something - is still mining.",
+      "short_description": "An abandoned mine. Rusted equipment lies scattered, and something still works in the darkness below.",
+      "exits": {
+        "up": "collapsed_tunnel",
+        "down": "mine_depths"
+      },
+      "items": ["torch", "health_potion"],
+      "enemy_id": "cave_crawler",
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "mine_depths",
+      "name": "The Mine Depths",
+      "description": "You descend into the deepest level of the mine, where the air is thick with dust and the weight of the earth presses down upon you. The walls here glitter with veins of ore - gold, silver, and something else. Something that pulses with a faint purple light.\n\nThis is what killed the miners. Not cave-ins. Not monsters. Greed.\n\nThe purple ore is everywhere, beautiful and terrible. Where it's been mined, the rock bleeds darkness. Shadows pool in the carved spaces like liquid, and you swear you see faces forming in their depths.\n\nA massive excavation dominates the chamber - the miners were digging toward something. A structure, buried impossibly deep. Ancient stones peek through the rock, covered in the same spiraling symbols you saw in the shrine above.\n\nThe *tink-tink-tink* is louder here. In the darkness ahead, a figure hunches over a pickaxe, mining endlessly. Its movements are mechanical, repetitive. It has been mining for a very, very long time.\n\nIt stops. It turns. Empty eye sockets regard you from a skull that grins with infinite patience.",
+      "short_description": "The deepest mine level. Purple ore pulses in the walls, and an undead miner turns to face you.",
+      "exits": {
+        "up": "abandoned_mine",
+        "east": "buried_temple"
+      },
+      "items": ["gold_coins"],
+      "enemy_id": "undead_miner",
+      "chest": {
+        "id": "chest_mine_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["miners_pickaxe", "gold_coins", "greater_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "buried_temple",
+      "name": "The Buried Temple",
+      "description": "Through a gap in the excavation, you squeeze into a structure that predates human civilization. The architecture is wrong - angles that don't quite meet, proportions that make your eyes ache, doorways sized for things not shaped like men.\n\nThis temple was buried deliberately. Someone wanted it forgotten.\n\nThe walls are covered in murals that move when you're not looking directly at them. Stars wheel across painted skies. Figures bow before altars. Something vast and terrible rises from the depths of a painted sea.\n\nAt the temple's heart, an altar of black stone holds a single object: a crown of twisted metal and purple crystal. It whispers to you. It knows your name. It promises power beyond imagination.\n\nDO NOT TOUCH IT.\n\nThe warning is carved into the floor in a dozen languages, some human, some... not. The most recent addition is scratched in dried blood: 'I should have listened.'\n\nBones are scattered around the altar. Many, many bones.",
+      "short_description": "An ancient buried temple. A whispering crown sits upon an altar, promising power and death.",
+      "exits": {
+        "west": "mine_depths"
+      },
+      "items": [],
+      "enemy_id": "temple_guardian",
+      "chest": {
+        "id": "chest_temple_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "legendary",
+        "fixed_loot": ["crown_of_madness", "void_scroll", "supreme_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {},
+      "has_fountain": true,
+      "fountain_effects": ["curse_or_blessing", "level_up", "major_damage", "random_weapon"]
+    },
+    {
+      "id": "echoing_chasm",
+      "name": "The Echoing Chasm",
+      "lore_objects": {
+        "bridge": "The bridge is impossibly old, its stones worn smooth by countless feet. Scratches in the rock tell of desperate clinging - those who almost fell but held on. Longer scratches tell of those who didn't.",
+        "stars": "The lights below don't twinkle like stars should. They pulse. They watch. One of them blinks, and you realize they aren't stars at all. They're eyes.",
+        "echoes": "You whisper your name into the chasm. It comes back wrong. Not your name, but something else. Something that sounds like it's been waiting to learn your name for a very long time."
+      },
+      "description": "The floor gives way to a vast chasm that plunges into absolute darkness. A narrow stone bridge spans the gap, ancient and crumbling, with no railings to prevent a fatal fall.\n\nEvery sound you make returns to you multiplied - your footsteps become the march of armies, your breathing becomes the gasps of a thousand dying men. The chasm amplifies and distorts, playing tricks with your mind.\n\n'Turn back,' the echoes whisper in your own voice.\n'Turn back,' they repeat, but twisted, mocking.\n'TURN BACK,' they scream, and the bridge trembles.\n\nFar below - impossibly far - you see lights. Not torches. Not magic. Stars. As if the chasm opens not into the earth, but into the void between worlds.\n\nSomething moves in that void. Something that has noticed you.\n\nThe bridge is the only way forward. One step at a time. Don't look down.",
+      "short_description": "A vast chasm spanned by a crumbling bridge. Your echoes return twisted and wrong.",
+      "exits": {
+        "up": "mossy_antechamber",
+        "west": "void_edge"
+      },
+      "items": [],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "void_edge",
+      "name": "The Edge of the Void",
+      "description": "You have crossed the bridge and stand now at the edge of reality itself. The chasm behind you seems almost comforting compared to what lies ahead.\n\nThe chamber opens onto... nothing. Not darkness - darkness is merely the absence of light. This is the absence of everything. A void so complete that looking at it makes your mind rebel, makes your eyes water, makes your soul shiver.\n\nAnd yet, something lives here.\n\nPlatforms of ancient stone float in the void, connected by chains of pure light. Upon the nearest platform, a pedestal holds an object of terrible power - a fragment of crystallized void, pulsing with anti-light.\n\nThe void whispers. It offers peace. Silence. An end to struggle. All you have to do is step forward. Let go. Fall forever.\n\nOr you could take the crystal and run. If you're fast enough. If you're brave enough. If you're foolish enough.",
+      "short_description": "The edge of the void itself. Reality ends here, and something waits in the nothing.",
+      "exits": {
+        "east": "echoing_chasm"
+      },
+      "items": [],
+      "enemy_id": "void_spawn",
+      "chest": {
+        "id": "chest_void_01",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "legendary",
+        "fixed_loot": ["void_shard", "amulet_of_the_void", "meteor_scroll"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "mushroom_grotto",
+      "name": "The Mushroom Grotto",
+      "description": "You emerge into a cavern that seems to belong to another world entirely. Massive mushrooms tower above you like trees, their caps the size of houses, their stems thick as ancient oaks. Smaller fungi carpet the ground in every color imaginable - electric blue, vivid purple, sickly green, pulsing pink.\n\nThe air is thick with spores that drift like snow, glowing softly in the darkness. Each breath fills your lungs with earthy sweetness and something else - something that makes the edges of your vision swim and colors seem more vivid.\n\nBioluminescent insects flit between the mushroom trees, leaving trails of light in their wake. In the distance, you hear what sounds like singing - high, ethereal voices that might be beautiful or might be a warning.\n\nPaths wind between the fungal giants, marked by stepping stones of polished wood. Someone tends this garden. Someone - or something - has cultivated this underground forest for a very long time.\n\nA wooden sign is posted at a fork in the path:\n'VISITORS WELCOME. THIEVES EATEN.'\n\nIt's signed with a paw print.",
+      "short_description": "A cavern of giant glowing mushrooms. Spores drift like snow, and something tends this fungal garden.",
+      "exits": {
+        "north": "underground_lake",
+        "south": "myconid_village"
+      },
+      "items": ["antidote", "health_potion"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "myconid_village",
+      "name": "The Myconid Village",
+      "description": "The path leads to a clearing in the mushroom forest where a village has grown - literally grown, for the buildings are living mushrooms shaped by patient cultivation. Round doorways lead into cap-houses, and windows glow with warm, golden light.\n\nThe inhabitants emerge to greet you: Myconids, mushroom-folk standing waist-high, their cap-heads bobbing as they move. They communicate in puffs of spores that somehow translate directly into your mind.\n\n*Welcome, surface-walker. Few find our village. Fewer leave.*\n\nThe Elder Myconid approaches, its cap spotted with age, its stem gnarled but strong. It studies you with eyes like dark buttons.\n\n*You seek the Warlord above. We know of him. He is a disease. A blight. We will help you - for a price.*\n\n*Bring us the head of the Spider Queen who poisons our waters, and we will show you a secret path to the throne room. Do you accept?*\n\nThe myconids watch. They wait. They are patient as only fungi can be.",
+      "short_description": "A village of mushroom-folk. The Elder offers a deal: slay the Spider Queen for a secret path.",
+      "exits": {
+        "north": "mushroom_grotto",
+        "east": "spider_queens_lair"
+      },
+      "items": ["regeneration_potion", "antidote"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {},
+      "is_safe": true
+    },
+    {
+      "id": "spider_queens_lair",
+      "name": "The Spider Queen's Lair",
+      "description": "The mushroom forest gives way to a nightmare of silk and shadow. Webs stretch between every surface, layer upon layer, creating a maze of gossamer tunnels. The strands vibrate with every step you take, sending signals deep into the darkness.\n\nShe knows you're here.\n\nCocoons hang everywhere - thousands of them, ranging from mouse-sized to man-sized to things you don't want to think about. Some twitch. Some are still. Some have been torn open, their contents devoured.\n\nAt the lair's heart, a vast web-throne supports the Spider Queen herself. She is enormous - her body the size of a horse, her legs spanning the width of the chamber. Her carapace is midnight black, adorned with patterns that look almost like a crown. Eight eyes, each the size of your fist, fix upon you with alien intelligence.\n\n'Little morsel,' she speaks, her voice a silken whisper that comes from everywhere at once. 'Did the mushroom-things send you? How... predictable.'\n\nShe rises. Her children emerge from the shadows - hundreds of them, clicking and hissing.\n\n'I've been expecting you.'",
+      "short_description": "The Spider Queen's throne room. She sits upon a web-throne, surrounded by thousands of her children.",
+      "exits": {
+        "west": "myconid_village"
+      },
+      "items": [],
+      "enemy_id": "spider_queen",
+      "chest": {
+        "id": "chest_spider_queen",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["spider_queens_fang", "web_weaver_armor", "supreme_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "servants_quarters",
+      "name": "The Servants' Quarters",
+      "description": "Behind a hidden door lies the warren where the dungeon's servants once lived - those who cooked, cleaned, and catered to the Warlord's every dark whim. The rooms are small, cramped, and utterly devoid of comfort.\n\nBunk beds are stacked three high, their thin mattresses rotted to nothing. Personal effects lie scattered about - a wooden comb, a child's doll, a locket containing a faded portrait. The servants had lives once, before the Warlord claimed them.\n\nThe walls are covered in scratched tallies - days counted, perhaps, or victims witnessed. One wall is different: a mural, painted in secret, depicting a sunny meadow with a small cottage. Someone's dream of escape, preserved in stolen pigments.\n\nA narrow staircase leads down to the kitchens. You smell something cooking - impossible, after all these centuries, yet unmistakable. The scent of roasting meat and baking bread.\n\nYour stomach growls. Your mind screams danger.",
+      "short_description": "The servants' quarters. Small, sad rooms tell stories of lives lived in shadow. Something cooks below.",
+      "exits": {
+        "south": "throne_room_approach",
+        "down": "haunted_kitchen"
+      },
+      "items": ["health_potion"],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_servant",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "common",
+        "fixed_loot": ["leather_armor", "health_potion", "gold_coins"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "haunted_kitchen",
+      "name": "The Haunted Kitchen",
+      "description": "The kitchen is alive with activity - pots bubble on stoves, knives chop vegetables, bread rises in ovens - all without a single living soul to tend them. Ghost servants work endlessly, preparing a feast that will never be eaten, trapped in the routine of their deaths.\n\nThey don't notice you at first. A spectral cook stirs a cauldron of something that smells divine. A translucent scullery maid scrubs dishes that reform as fast as she cleans them. A phantom butler arranges silverware on an endless table.\n\nThen you bump a pot. The clatter cuts through the kitchen like a thunderclap.\n\nEvery ghost stops. Every ghost turns. Every ghost stares at you with hollow eyes that flicker between confusion and rage.\n\n'Guest?' the head cook whispers, her voice like wind through dead leaves.\n'INTRUDER!' the butler shrieks, and the knives begin to fly.\n\nThe feast will not be interrupted. The feast must go on. Forever.",
+      "short_description": "A kitchen run by ghosts. They cook an eternal feast, and do not welcome interruption.",
+      "exits": {
+        "up": "servants_quarters"
+      },
+      "items": ["supreme_health_potion"],
+      "enemy_id": "ghost_cook",
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "wardens_office",
+      "name": "The Warden's Office",
+      "description": "A heavy iron door leads to the office of the dungeon's warden - the man responsible for keeping the prisoners alive long enough to suffer. His desk still holds the tools of bureaucratic cruelty: ledgers of prisoners, schedules of torture, requisition forms for chains and brands.\n\nThe warden himself sits behind the desk, or what remains of him. Time has reduced him to bones in a rotted uniform, slumped in his chair, a quill still clutched in skeletal fingers. His final entry lies open:\n\n'Day 3,847. The Warlord has ordered all prisoners executed. I have carried out his command. I am the last. Tonight, I join them. May the gods forgive me, for I cannot forgive myself.'\n\nThe rope still hangs from the ceiling beam.\n\nA ring of keys hangs from the warden's belt - master keys that might open doors throughout the dungeon. His ghost watches from the corner, too broken to attack, too guilty to rest.",
+      "short_description": "The warden's office. His skeleton sits at his desk, and his ghost watches in eternal shame.",
+      "exits": {
+        "south": "prison_cells"
+      },
+      "items": ["master_key", "health_potion"],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_warden",
+        "state": "locked",
+        "key_required": "jail_key",
+        "trap_damage": 0,
+        "loot_tier": "uncommon",
+        "fixed_loot": ["wardens_blade", "iron_shield", "greater_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "ossuary",
+      "name": "The Ossuary",
+      "description": "Bones. Nothing but bones. They line the walls, stack in pillars, form archways and furniture. This is where the dungeon's dead were brought - not for burial, but for decoration. The Warlord had a grim sense of aesthetics.\n\nSkulls watch from every direction, thousands of empty eye sockets following your movement. Femurs form chandeliers. Ribcages serve as sconces. A throne of interlocked spines stands against the far wall, and something tells you the Warlord sat here often, admiring his collection.\n\nIn the center of the room, a pit descends into darkness. The bones thrown in were too broken, too incomplete, too unworthy of display. You hear them down there - a constant rustling, clicking, grinding. The rejected dead, still moving, still hungry.\n\nThe bones on the walls begin to rattle. Some detach and float, assembling themselves into shapes. Skeletal hands reach for you from all directions.\n\nThere are so many. So very many.",
+      "short_description": "A cathedral of bones. The dead line every surface, and they are waking up.",
+      "exits": {
+        "west": "crypt_chamber",
+        "down": "bone_pit"
+      },
+      "items": [],
+      "enemy_id": "bone_collector",
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "bone_pit",
+      "name": "The Bone Pit",
+      "description": "You descend into a nightmare. The pit is filled with bones - not stacked, not arranged, but piled carelessly, discarded like garbage. Tens of thousands of remains, crushed and broken, forming a bed of death that shifts beneath your feet with every step.\n\nThe bones move on their own. Skeletal hands grasp at your ankles. Skulls roll to face you, jaws clacking. The entire pit writhes with undead animation, countless fragments trying to form into something whole.\n\nAt the pit's center, they have succeeded. A massive construct rises from the bones - a giant assembled from the remains of hundreds, held together by dark magic and malevolent will. It has no single skull but dozens, fused into a crown of death. It has no voice but the grinding of a thousand bones.\n\nIt reaches for you with hands made of ribcages, fingers of femurs. It is hungry. It is always hungry. And you are standing in its stomach.",
+      "short_description": "A pit of countless bones. Something massive has assembled itself from the dead.",
+      "exits": {
+        "up": "ossuary"
+      },
+      "items": [],
+      "enemy_id": "bone_colossus",
+      "chest": {
+        "id": "chest_bone_pit",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["bone_crusher", "skull_helm", "supreme_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "alchemists_lab",
+      "name": "The Alchemist's Laboratory",
+      "description": "Glass everywhere - beakers, flasks, tubes, and vials covering every surface, connected by a maze of copper pipes and rubber hoses. Some still bubble with unknown substances. Others have shattered, their contents eating through the stone floor.\n\nThis was the Warlord's laboratory, where he experimented on prisoners, seeking the secret of immortality. He found it, in a way. The immortality of undeath.\n\nJournals are stacked on a central workbench, filled with cramped handwriting and disturbing diagrams. One page is marked:\n\n'SUCCESS! Subject 847 has survived the transformation. Side effects: loss of humanity, uncontrollable hunger, sensitivity to sunlight. Acceptable trade-offs. Tomorrow, I begin the process on myself.'\n\nThe final journal entry:\n'It hurts. Gods, it hurts. But I can feel the power. I will live forever. I will rule forever. I will—'\n\nThe writing dissolves into mad scribbles.\n\nSomething moves in the shadows. Subject 847 is still here.",
+      "short_description": "The Warlord's alchemy lab. Failed experiments bubble in flasks, and something successful lurks in the shadows.",
+      "exits": {
+        "west": "forgotten_library"
+      },
+      "items": ["greater_health_potion", "antidote"],
+      "enemy_id": "failed_experiment",
+      "chest": {
+        "id": "chest_lab",
+        "state": "trapped",
+        "trap_damage": 20,
+        "loot_tier": "rare",
+        "fixed_loot": ["alchemists_fire", "elixir_of_strength", "regeneration_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "treasure_vault",
+      "name": "The Treasure Vault",
+      "description": "Gold. Mountains of gold. Coins spill across the floor in drifts, piled against walls, cascading from overflowing chests. Gems glitter among the coins - rubies, emeralds, diamonds, sapphires - enough wealth to buy kingdoms.\n\nThis is the Warlord's hoard, accumulated over centuries of conquest and plunder. The crowns of fallen kings rest on velvet pillows. Legendary weapons hang on the walls. Artifacts of terrible power sit carelessly on shelves.\n\nBut the vault is not unguarded.\n\nSkeletal warriors stand at attention around the perimeter, their eye sockets glowing with cold blue flame. They do not move as you enter, but they watch. They wait. They have been given one command: protect the treasure. Forever.\n\nA massive chest sits on a raised platform at the vault's heart, larger than all the others, bound in adamantine and sealed with magic. Whatever lies within must be the Warlord's greatest treasure.\n\nOr his greatest secret.",
+      "short_description": "The Warlord's treasure vault. Mountains of gold and priceless artifacts... all guarded by the dead.",
+      "exits": {
+        "north": "throne_room_approach"
+      },
+      "items": ["gold_coins", "gold_coins", "gold_coins"],
+      "enemy_id": "vault_guardian",
+      "chest": {
+        "id": "chest_vault",
+        "state": "locked",
+        "key_required": "master_key",
+        "trap_damage": 0,
+        "loot_tier": "legendary",
+        "fixed_loot": ["godsbane", "dragon_scale", "supreme_health_potion", "gold_coins"],
         "opened": false
       },
       "locked_exits": {}

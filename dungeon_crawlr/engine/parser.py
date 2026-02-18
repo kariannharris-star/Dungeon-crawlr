@@ -23,7 +23,9 @@ ALIASES = {
 
     # Look
     'l': 'look',
-    'examine': 'look',
+    'inspect': 'examine',
+    'study': 'examine',
+    'read': 'examine',
 
     # Combat
     'fight': 'attack',

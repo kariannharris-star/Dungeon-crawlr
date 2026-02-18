@@ -119,14 +119,61 @@ def handle_exploration_command(game_state: GameState, command: str, args: list) 
     elif command == 'look':
         if args:
             # Look at specific target
-            target = ' '.join(args)
-            # Check if target is an item in the room
+            target = ' '.join(args).lower()
             room = game_state.current_room
+
+            # Check if target is an item in the room
             for item_id in room.items:
                 item_data = game_state.get_item_data(item_id)
-                if target.lower() in item_data.get('name', item_id).lower():
+                if target in item_data.get('name', item_id).lower():
                     Display.show_info(item_data.get('description', 'Nothing special.'))
                     return True
+
+            # Check if target is a lore object
+            lore_objects = room.data.get('lore_objects', {})
+            for obj_name, obj_desc in lore_objects.items():
+                if target in obj_name.lower():
+                    Display.show_info(f"You examine the {obj_name}...")
+                    print()
+                    Display.show_info(obj_desc)
+                    return True
+
+            Display.show_error(f"You don't see '{target}' here.")
+            return True
+
+    elif command == 'examine':
+        if not args:
+            Display.show_error("Examine what? Try 'examine <object>'")
+            return True
+        target = ' '.join(args).lower()
+        room = game_state.current_room
+
+        # Check lore objects first
+        lore_objects = room.data.get('lore_objects', {})
+        for obj_name, obj_desc in lore_objects.items():
+            if target in obj_name.lower():
+                Display.show_info(f"You examine the {obj_name} closely...")
+                print()
+                Display.show_info(obj_desc)
+                return True
+
+        # Check items in room
+        for item_id in room.items:
+            item_data = game_state.get_item_data(item_id)
+            if target in item_data.get('name', item_id).lower():
+                Display.show_info(item_data.get('description', 'Nothing special.'))
+                return True
+
+        # Check inventory
+        if game_state.player:
+            for item_id in game_state.player.inventory:
+                item_data = game_state.get_item_data(item_id)
+                if target in item_data.get('name', item_id).lower():
+                    Display.show_info(item_data.get('description', 'Nothing special.'))
+                    return True
+
+        Display.show_error(f"You don't see '{target}' to examine.")
+        return True
             # Check if target is the current enemy
             enemy = game_state.get_room_enemy()
             if enemy and target.lower() in enemy.name.lower():

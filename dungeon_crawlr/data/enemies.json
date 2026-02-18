@@ -130,6 +130,184 @@
       "drop_table": [
         {"item_id": "greater_health_potion", "chance": 0.50}
       ]
+    },
+    {
+      "id": "frozen_knight",
+      "name": "Frozen Knight",
+      "hp": 55,
+      "max_hp": 55,
+      "attack": 12,
+      "defense": 7,
+      "xp_reward": 50,
+      "gold_reward": 20,
+      "description": "A warrior encased in ice, still moving with jerky, mechanical motions. Frost crackles from every joint, and its frozen blade gleams with deadly cold.",
+      "drop_table": [
+        {"item_id": "frost_blade", "chance": 0.15},
+        {"item_id": "greater_health_potion", "chance": 0.25}
+      ]
+    },
+    {
+      "id": "ice_wraith",
+      "name": "Ice Wraith",
+      "hp": 45,
+      "max_hp": 45,
+      "attack": 14,
+      "defense": 3,
+      "xp_reward": 55,
+      "gold_reward": 18,
+      "description": "A spirit of pure cold, barely visible except for the frost that forms in its wake. Its touch freezes flesh and shatters bone.",
+      "drop_table": [
+        {"item_id": "winter_cloak", "chance": 0.20}
+      ]
+    },
+    {
+      "id": "cave_crawler",
+      "name": "Cave Crawler",
+      "hp": 30,
+      "max_hp": 30,
+      "attack": 8,
+      "defense": 4,
+      "xp_reward": 25,
+      "gold_reward": 8,
+      "description": "A pale, eyeless creature that skitters across walls and ceilings. Its long claws click against stone as it circles you hungrily.",
+      "drop_table": [
+        {"item_id": "health_potion", "chance": 0.30}
+      ]
+    },
+    {
+      "id": "undead_miner",
+      "name": "Undead Miner",
+      "hp": 40,
+      "max_hp": 40,
+      "attack": 11,
+      "defense": 4,
+      "xp_reward": 35,
+      "gold_reward": 15,
+      "description": "A skeletal figure still clutching its pickaxe, driven by an endless compulsion to dig. Its hollow eyes glow with purple light from the corrupted ore.",
+      "drop_table": [
+        {"item_id": "miners_pickaxe", "chance": 0.20},
+        {"item_id": "gold_coins", "chance": 0.40}
+      ]
+    },
+    {
+      "id": "temple_guardian",
+      "name": "Temple Guardian",
+      "hp": 90,
+      "max_hp": 90,
+      "attack": 16,
+      "defense": 8,
+      "xp_reward": 80,
+      "gold_reward": 40,
+      "description": "An ancient construct of obsidian and gold, awakened to defend the buried temple. Symbols of power pulse across its surface, and its eyes burn with eldritch fire.",
+      "drop_table": [
+        {"item_id": "void_scroll", "chance": 0.30},
+        {"item_id": "supreme_health_potion", "chance": 0.25}
+      ]
+    },
+    {
+      "id": "void_spawn",
+      "name": "Void Spawn",
+      "hp": 70,
+      "max_hp": 70,
+      "attack": 18,
+      "defense": 5,
+      "xp_reward": 85,
+      "gold_reward": 30,
+      "description": "A creature from beyond reality, its form constantly shifting between shapes that hurt to perceive. Where it moves, existence itself seems to fray.",
+      "drop_table": [
+        {"item_id": "void_shard", "chance": 0.25},
+        {"item_id": "dark_essence", "chance": 0.40}
+      ]
+    },
+    {
+      "id": "spider_queen",
+      "name": "Spider Queen",
+      "hp": 100,
+      "max_hp": 100,
+      "attack": 16,
+      "defense": 6,
+      "xp_reward": 90,
+      "gold_reward": 45,
+      "description": "The massive matriarch of the dungeon's spider population. Her carapace gleams like polished obsidian, and venom drips from fangs the size of daggers. Thousands of eyes watch you with cold intelligence.",
+      "drop_table": [
+        {"item_id": "spider_queens_fang", "chance": 0.50},
+        {"item_id": "web_weaver_armor", "chance": 0.20}
+      ]
+    },
+    {
+      "id": "ghost_cook",
+      "name": "Spectral Chef",
+      "hp": 35,
+      "max_hp": 35,
+      "attack": 10,
+      "defense": 2,
+      "xp_reward": 30,
+      "gold_reward": 12,
+      "description": "The ghost of the dungeon's head cook, still wearing a bloodstained apron. Spectral knives orbit around it, and its hollow eyes blaze with fury at the interruption.",
+      "drop_table": [
+        {"item_id": "health_potion", "chance": 0.40},
+        {"item_id": "greater_health_potion", "chance": 0.20}
+      ]
+    },
+    {
+      "id": "bone_collector",
+      "name": "Bone Collector",
+      "hp": 50,
+      "max_hp": 50,
+      "attack": 12,
+      "defense": 6,
+      "xp_reward": 45,
+      "gold_reward": 18,
+      "description": "A hunched figure assembled from mismatched bones, constantly adding to itself from the ossuary's walls. Extra arms sprout from its back, all reaching, all grasping.",
+      "drop_table": [
+        {"item_id": "bone_knife", "chance": 0.30},
+        {"item_id": "bone_shield", "chance": 0.20}
+      ]
+    },
+    {
+      "id": "bone_colossus",
+      "name": "Bone Colossus",
+      "hp": 120,
+      "max_hp": 120,
+      "attack": 18,
+      "defense": 10,
+      "xp_reward": 100,
+      "gold_reward": 50,
+      "description": "A giant constructed from thousands of bones, fused together by dark magic. Multiple skulls form a crown atop its massive frame, each screaming silently. It towers above you, death given terrible form.",
+      "drop_table": [
+        {"item_id": "bone_crusher", "chance": 0.30},
+        {"item_id": "skull_helm", "chance": 0.20}
+      ]
+    },
+    {
+      "id": "failed_experiment",
+      "name": "Failed Experiment",
+      "hp": 60,
+      "max_hp": 60,
+      "attack": 14,
+      "defense": 4,
+      "xp_reward": 55,
+      "gold_reward": 22,
+      "description": "Once human, now something else entirely. Its body is a patchwork of flesh and machinery, alchemy and agony. It moves in jerks and spasms, driven by pain and hunger.",
+      "drop_table": [
+        {"item_id": "regeneration_potion", "chance": 0.30},
+        {"item_id": "antidote", "chance": 0.25}
+      ]
+    },
+    {
+      "id": "vault_guardian",
+      "name": "Vault Guardian",
+      "hp": 85,
+      "max_hp": 85,
+      "attack": 15,
+      "defense": 12,
+      "xp_reward": 75,
+      "gold_reward": 60,
+      "description": "An elite skeletal warrior clad in golden armor, sworn to protect the Warlord's treasure for eternity. Blue flames burn in its eye sockets, and its blade has never known defeat.",
+      "drop_table": [
+        {"item_id": "gold_coins", "chance": 0.80},
+        {"item_id": "greater_health_potion", "chance": 0.40}
+      ]
     }
   ]
 }
