@@ -4,6 +4,12 @@
     {
       "id": "village_square",
       "name": "Thornwick Village Square",
+      "lore_objects": {
+        "fountain": "The fountain was built to commemorate the village's founding three centuries ago. Its waters were said to be blessed. Now it's a grave for dead leaves and shattered dreams. Someone has scratched words into the basin: 'THE KING RETURNS. THE KING NEVER LEFT.'",
+        "signpost": "The wood is rotted, the paint faded, but the warnings remain. Dozens of names are carved into the post - adventurers who passed this way. Some carved 'RIP' next to their own names before heading north. Dark humor or grim prophecy?",
+        "notice board": "Missing persons. Bounties. Warnings. One notice catches your eye: 'SEEKING PARTY FOR DUNGEON EXPEDITION. Previous party did not return. Payment negotiable. Survival not guaranteed.' It's been posted and re-posted for twenty years.",
+        "memorial stone": "A granite slab lists the names of villagers lost to the dungeon. It started as a monument. Now it's a wall - names carved so small to fit them all. The latest additions are from last week."
+      },
       "description": "You stand in the central square of Thornwick, a small village that has seen better days. A cracked stone fountain sits in the center, its water long since dried up. Weeds push through the cobblestones, and the few villagers who pass by do so with hunched shoulders and fearful glances toward the northern road.\n\nA weathered signpost points in several directions:\n- NORTH: The Old Dungeon (WARNING: DANGER!)\n- EAST: The Blacksmith\n- WEST: The Apothecary\n- SOUTH: The Tavern\n\nBattered notice boards are plastered with faded warnings about the dungeon to the north, where an ancient evil has awakened. A reward is posted for any brave soul who can defeat the Warlord who dwells within.\n\nThe air smells of wood smoke and fear. This village lives in the shadow of darkness.",
       "short_description": "The village square of Thornwick. Shops surround you, and the dungeon looms to the north.",
       "exits": {
@@ -21,6 +27,12 @@
     {
       "id": "blacksmith_shop",
       "name": "The Iron Forge - Blacksmith",
+      "lore_objects": {
+        "garret": "Garret's hands are a map of scars and burns - the history of forty years at the forge. 'My father made weapons for the King's army,' he says, not looking up from his work. 'Fine blades. The best. Then the King became... what he is now. Those same blades were used to slaughter innocents.' He hammers harder. 'Now I make weapons to KILL kings.'",
+        "wall of blades": "Dozens of swords hang on the wall, but one space is empty. A plaque beneath reads: 'RESERVED FOR THE BLADE THAT SLAYS THE WARLORD.' Garret says he'll give it free to whoever can fill that space. No one has.",
+        "broken sword": "A shattered greatsword rests on a shelf of honor. 'My grandfather's blade,' Garret explains. 'He faced the Warlord when the darkness first came. The sword broke. Grandfather didn't survive. But the blade wounded the Warlord - first blood ever drawn on that monster. Family legacy.'",
+        "armor stand": "A set of battered armor stands in the corner, too damaged to sell. Garret never moves it. 'Last customer who bought a full set,' he says quietly. 'Good kid. Confident. Came back three days later - just his head, delivered by skeleton messenger.' He spits. 'Warlord's way of saying thanks.'"
+      },
       "description": "Heat washes over you as you enter the blacksmith's shop. The forge burns bright orange, and the rhythmic clang of hammer on anvil fills the air. Weapons and armor of all types hang from the walls and rest on wooden racks.\n\nGarret the blacksmith is a massive man with arms like tree trunks. Soot covers his leather apron, and his eyes are sharp despite his age. He nods as you enter.\n\n'Looking to arm yourself for the dungeon, are ye? Brave or foolish, hard to say. But I've got the steel you'll need either way. Take a look at me wares.'\n\nThe shop is well-stocked with blades, hammers, axes, and armor of all qualities. Prices are marked on small wooden tags.",
       "short_description": "The blacksmith's forge. Garret hammers at the anvil, surrounded by weapons and armor.",
       "exits": {
@@ -37,6 +49,12 @@
     {
       "id": "apothecary",
       "name": "The Healing Herb - Apothecary",
+      "lore_objects": {
+        "miriam": "Sage Miriam's eyes hold centuries of wisdom in a face that should be merely decades old. 'I knew the Warlord when he was just a prince,' she admits. 'Treated his childhood fevers. He was kind then. Gentle.' Her hands shake as she measures herbs. 'I've spent my life trying to brew a cure for what he became. I've failed. Perhaps you won't.'",
+        "black bottle": "One shelf holds a single black bottle, chained to the wall and marked with warnings in five languages. 'Warlord's blood,' Miriam whispers. 'I collected it decades ago, hoping to create a poison. Instead... it corrupted everything it touched. I keep it to remind myself what we're fighting.'",
+        "scroll collection": "Ancient scrolls fill an entire case. 'Salvaged from the dungeon library,' Miriam explains. 'Spells of destruction, yes, but also... records. The Warlord kept meticulous notes on everyone he killed. Names. Faces. Last words. Thousands of entries. He remembered them all.'",
+        "portrait": "A faded portrait shows a young woman and a handsome man in royal garb. 'The Queen and King, before the transformation,' Miriam says softly. 'She was my sister. He killed her first - said she was a spy. She wasn't. She was trying to save him.' Miriam's voice breaks. 'I couldn't save either of them.'"
+      },
       "description": "The scent of dried herbs and strange chemicals fills your nostrils as you enter the apothecary. Glass bottles of every color line the shelves, filled with bubbling liquids, dried ingredients, and things you'd rather not identify.\n\nAn elderly woman with silver hair and knowing eyes looks up from her mortar and pestle. She is Sage Miriam, the village healer and potion-maker.\n\n'Ah, another would-be hero. Come to stock up before facing the darkness, have you? Smart. The dungeon will try to kill you in a hundred ways - poison, wounds, curses. I have remedies for most of them.'\n\nShe gestures to the shelves.\n\n'Potions to heal, scrolls to harm, and a few special items for those with gold to spare. Everything has a price, but so does dying unprepared.'",
       "short_description": "The apothecary shop. Potions and scrolls line every shelf, and Sage Miriam watches you with wise eyes.",
       "exits": {
@@ -56,18 +74,25 @@
       "lore_objects": {
         "notice board": "Dozens of notices are pinned to the board. Most are warnings: 'MISSING: My son Aldric. Last seen heading to dungeon.' 'REWARD: 100 gold for proof of the Warlord's death.' One note is different: 'To whoever reads this - I am the last survivor of the Royal Guard. The Warlord was once our king. Do not trust the crown. Do not wear the crown. DESTROY the crown. - Captain Vance'",
         "fireplace": "Above the fireplace hangs a battered shield bearing the royal crest - a lion crowned in thorns. Old Harken says it belonged to the last knight to challenge the Warlord. The knight's name has been scratched out, but someone carved beneath it: 'He was my father.'",
-        "harken": "Old Harken's remaining eye studies you with surprising sharpness. 'You want to know about the Warlord? He wasn't always a monster. King Valdric was a good man once - beloved, just, kind. But the darkness came, and he made a deal to save his kingdom. The kingdom is gone now. Only the deal remains.'"
+        "harken": "Old Harken's remaining eye studies you with surprising sharpness. 'You want to know about the Warlord? He wasn't always a monster. King Valdric was a good man once - beloved, just, kind. But the darkness came, and he made a deal to save his kingdom. The kingdom is gone now. Only the deal remains.'",
+        "dice table": "A worn table in the corner is surrounded by gamblers. Dice clatter constantly, and gold changes hands with every roll. A chalk board lists the games: 'HIGH-LOW: 2x payout. SKULL DICE: Up to 10x! DEATH OR GLORY: For the brave or foolish.' Old Harken takes a cut of every pot, naturally.",
+        "old adventurer": "A grizzled woman with a wooden leg sits alone, nursing a drink. Her armor is battered but well-maintained. She catches you looking and raises her mug. 'I was you, once. Full of hope. I made it to the Warlord's door.' She taps her wooden leg. 'He let me live as a warning. Don't be like me. Be better. Or be smarter and walk away.'",
+        "wanted posters": "The wall is plastered with wanted posters - not for criminals, but for monsters. 'GIANT SPIDER - 50 gold.' 'SKELETON KNIGHT - 75 gold.' 'THE WARLORD HIMSELF - 10,000 gold and a lordship.' That last one has been there for decades. No one has ever collected."
       },
-      "description": "The tavern is warm and surprisingly lively despite the village's grim mood. A fire crackles in a great stone hearth, and the smell of roasting meat and spilled ale fills the air. Adventurers and locals alike sit at worn wooden tables, sharing drinks and stories.\n\nBehind the bar, a one-eyed man polishes glasses with practiced ease. This is Old Harken, the tavern keeper and a former adventurer himself - as evidenced by his missing eye and the countless scars on his arms.\n\n'Looking for the dungeon, are ya? I lost this eye to a skeleton in that cursed place, thirty years ago. Barely made it out alive.'\n\nHe leans in close.\n\n'Word of advice: don't trust the chests. And if you hear whispering, run. The Warlord's been dead for centuries, but death never stopped him before.'\n\nThe tavern doesn't sell equipment, but it's a good place to rest and hear rumors.",
-      "short_description": "The village tavern. Adventurers share stories around the fire while Old Harken tends bar.",
+      "description": "The tavern is warm and surprisingly lively despite the village's grim mood. A fire crackles in a great stone hearth, and the smell of roasting meat and spilled ale fills the air. Adventurers and locals alike sit at worn wooden tables, sharing drinks and stories.\n\nBehind the bar, a one-eyed man polishes glasses with practiced ease. This is Old Harken, the tavern keeper and a former adventurer himself - as evidenced by his missing eye and the countless scars on his arms.\n\n'Looking for the dungeon, are ya? I lost this eye to a skeleton in that cursed place, thirty years ago. Barely made it out alive.'\n\nIn the corner, a DICE TABLE draws a rowdy crowd of gamblers. The clatter of dice and clink of gold never stops.\n\nHe leans in close.\n\n'Word of advice: don't trust the chests. And if you hear whispering, run. The Warlord's been dead for centuries, but death never stopped him before.'\n\nThe tavern sells drinks and hot meals. Type 'gamble' to try your luck at dice!",
+      "short_description": "The village tavern. Adventurers share stories while Old Harken tends bar. A DICE TABLE beckons gamblers.",
       "exits": {
         "north": "village_square"
       },
-      "items": ["health_potion"],
+      "items": [],
       "enemy_id": null,
       "chest": null,
       "locked_exits": {},
-      "is_safe": true
+      "is_safe": true,
+      "is_shop": true,
+      "shop_type": "tavern",
+      "has_gambling": true,
+      "shop_inventory": ["cheap_ale", "thornwick_bitter", "dwarven_stout", "elven_wine", "dragons_breath_whiskey", "mystery_grog", "heros_mead", "hot_meal"]
     },
     {
       "id": "dungeon_entrance",
@@ -125,7 +150,8 @@
       "exits": {
         "north": "guard_barracks",
         "down": "torture_chamber",
-        "east": "wardens_office"
+        "east": "wardens_office",
+        "west": "executioners_block"
       },
       "items": [],
       "enemy_id": "skeleton_warrior",
@@ -143,6 +169,12 @@
     {
       "id": "torture_chamber",
       "name": "The Torture Chamber",
+      "lore_objects": {
+        "iron maiden": "The iron maiden's interior spikes are arranged to miss vital organs. Designed to cause maximum pain while keeping victims alive for days. A plaque identifies its last occupant: 'THE QUEEN.' The Warlord's own wife, tortured for weeks before death claimed her as mercy.",
+        "rack": "Notches are carved into the rack's frame - a tally. Four hundred and seven marks. The torturer was proud of his work. A list of names hangs nearby, crossed out one by one. Some names appear multiple times - family members, tortured in sequence to break the will of survivors.",
+        "wall writings": "Among the desperate prayers, one message stands out: 'HE WATCHES THROUGH THEIR EYES.' An arrow points to the skulls mounted on the wall - victims repurposed as eternal surveillance. Even now, you feel watched.",
+        "torturers journal": "A leather-bound journal lies open: 'Subject 236 - Resisted for 14 days. Broke when I brought in his children. Note: Family leverage remains most effective. Recommendation to Warlord: capture alive when possible.' The handwriting is neat, clinical. Utterly inhuman."
+      },
       "description": "Your stomach turns as you descend into this chamber of horrors. Rusted iron implements of pain hang from the walls - thumbscrews, hot irons, flaying knives. A massive rack dominates the center of the room, its wooden frame dark with ancient bloodstains.\n\nAn iron maiden stands in one corner, its interior lined with cruel spikes. It is slightly ajar, and you glimpse bones within. Chains dangle from the ceiling, some still bearing skeletal hands at their ends.\n\nThe walls are scratched with final messages from the tortured: pleas for mercy, curses upon their tormentors, prayers to forgotten gods. One message repeats over and over: 'THE WARLORD SEES ALL.'\n\nDespite the horror, you notice some of the tools are of exceptional craftsmanship. Cruel, but well-made.",
       "short_description": "A horrific torture chamber. Implements of pain cover every surface, and the walls bear the messages of the damned.",
       "exits": {
@@ -242,6 +274,12 @@
     {
       "id": "armory_ruins",
       "name": "The Ruined Armory",
+      "lore_objects": {
+        "lion shields": "The shields bear the crest of House Valdris - a lion crowned with thorns. Once a symbol of hope and justice. Now a reminder that even heroes can fall. Someone has scratched 'TRAITOR' across one shield. Someone else scratched it out.",
+        "armor alcoves": "Each suit of armor has a nameplate, though most are too corroded to read. One remains legible: 'SIR MARCUS DAWN, FIRST KNIGHT OF THE REALM.' His armor is the most damaged - hundreds of sword cuts, as if an entire army attacked him. He stood alone at the end.",
+        "weapon stand": "The iron sword embedded in the stand bears an inscription: 'FOR THE TRUE KING.' It was placed here as a test - only one with royal blood could draw it. The Warlord had the blood. He chose to leave it. 'Too small,' the legends say he laughed.",
+        "skeletal soldier": "This skeleton still wears the tattered uniform of the royal guard. A journal lies nearby, its last entry barely readable: 'Day 7 of the siege. The Prince has become something else. He killed his father. He killed the Queen. He calls himself Warlord now. We hold the armory. We will die here. Tell my daughter I'"
+      },
       "description": "This chamber was once a proud armory, stocked with weapons to equip an army. Now it is a graveyard of broken steel and shattered dreams. Weapon racks line the walls, most collapsed or leaning drunkenly, their contents scattered across the floor in a carpet of rust and ruin.\n\nSplintered shield halves bear the faded crest of a lion - whatever kingdom they protected is long dead. Suit of plate armor stands in alcoves along the walls like silent sentinels, but closer inspection reveals gaping holes rusted through the metal. One suit has collapsed entirely into a heap of corroded plates.\n\nScattered among the weapons are bones - human bones, picked clean and yellowed with age. Some still clutch rusted blades in skeletal fingers. A great battle was fought here, and everyone lost.\n\nYet amid the ruin, some weapons still gleam. A careful search might yield something useful. Near the back of the room, an iron sword stands embedded point-down in a wooden weapon stand, as if waiting for a worthy hand.\n\nA grinding sound echoes from behind a collapsed rack. Something is moving among the bones.",
       "short_description": "A ruined armory filled with broken weapons and old bones. Some intact weapons still gleam amid the rust.",
       "exits": {
@@ -291,7 +329,9 @@
       "short_description": "A dark ritual chamber. A blood-stained pentagram dominates the floor, and a grimoire of dark magic lies open on a pedestal.",
       "exits": {
         "south": "forgotten_library",
-        "east": "throne_room_approach"
+        "east": "throne_room_approach",
+        "up": "collapsed_tower",
+        "north": "throne_gallery"
       },
       "items": ["antidote"],
       "enemy_id": null,
@@ -336,7 +376,8 @@
       "exits": {
         "north": "flooded_cellar",
         "east": "lake_island",
-        "south": "mushroom_grotto"
+        "south": "mushroom_grotto",
+        "down": "infested_sewers"
       },
       "items": ["health_potion"],
       "enemy_id": null,
@@ -424,7 +465,8 @@
       "short_description": "A hidden alcove behind a false wall. Potions and scrolls line dusty shelves, and a skeleton clutches its final writings.",
       "exits": {
         "east": "corridor_of_whispers",
-        "west": "starlight_fountain"
+        "west": "starlight_fountain",
+        "south": "royal_garden"
       },
       "items": ["greater_health_potion", "spell_scroll"],
       "enemy_id": null,
@@ -585,7 +627,8 @@
       "description": "You push through a concealed door and find yourself in a workshop of horrors. This is where the dungeon's guardians were made.\n\nHuge stone tables are covered in tools of construction and destruction - chisels and hammers, but also scalpels and bone saws. Diagrams cover the walls, showing the assembly of creatures from parts both mineral and organic.\n\nIn alcoves around the room stand half-finished golems - constructs of stone and metal waiting for the animating spark. Some are missing limbs. Others lack heads. All are terrifying.\n\nBut one is complete. It stands in the center of the room, twice your height, carved from solid granite. Runes glow along its arms and torso. As you enter, its massive head turns toward you with a grinding of stone.\n\nIt raises fists the size of anvils.\n\n'INTRUDER,' it rumbles, and the room shakes. 'DESTROY.'",
       "short_description": "A golem workshop. Half-finished constructs line the walls, and a massive stone guardian awakens at your approach.",
       "exits": {
-        "west": "throne_room_approach"
+        "west": "throne_room_approach",
+        "north": "war_room"
       },
       "items": [],
       "enemy_id": "stone_golem",
@@ -911,6 +954,12 @@
     {
       "id": "treasure_vault",
       "name": "The Treasure Vault",
+      "lore_objects": {
+        "crown collection": "Seventeen crowns rest on velvet pillows, each labeled with a kingdom's name. Some are gold and jewels. Others are simple iron circlets. One is tiny - a child's crown. The label reads: 'PRINCE ALDRIC, AGE 7. THRONE INHERITED: 3 HOURS. REIGN ENDED: PERSONALLY.'",
+        "portrait wall": "Paintings cover one wall - monarchs in their finery. Each portrait has been slashed, defaced, or burned. But the Warlord's portrait remains pristine. It shows him as he was: young, handsome, smiling. The painter captured something in his eyes. Madness, waiting to bloom.",
+        "weapon wall": "Legendary weapons from fallen heroes hang as trophies. A blackened holy sword - 'PALADIN THERON.' A broken staff - 'ARCHMAGE VELKRIS.' A child's wooden practice sword - 'PRINCE ALDRIC.' The Warlord kept them all. Souvenirs.",
+        "adamantine chest": "The great chest bears no lock - it opens to blood. A channel runs from the lid to the floor, stained dark. How many have bled trying to claim what's inside? A whisper echoes in your mind: 'Worth it. Worth everything. Open me. OPEN ME.'"
+      },
       "description": "Gold. Mountains of gold. Coins spill across the floor in drifts, piled against walls, cascading from overflowing chests. Gems glitter among the coins - rubies, emeralds, diamonds, sapphires - enough wealth to buy kingdoms.\n\nThis is the Warlord's hoard, accumulated over centuries of conquest and plunder. The crowns of fallen kings rest on velvet pillows. Legendary weapons hang on the walls. Artifacts of terrible power sit carelessly on shelves.\n\nBut the vault is not unguarded.\n\nSkeletal warriors stand at attention around the perimeter, their eye sockets glowing with cold blue flame. They do not move as you enter, but they watch. They wait. They have been given one command: protect the treasure. Forever.\n\nA massive chest sits on a raised platform at the vault's heart, larger than all the others, bound in adamantine and sealed with magic. Whatever lies within must be the Warlord's greatest treasure.\n\nOr his greatest secret.",
       "short_description": "The Warlord's treasure vault. Mountains of gold and priceless artifacts... all guarded by the dead.",
       "exits": {
@@ -925,6 +974,185 @@
         "trap_damage": 0,
         "loot_tier": "legendary",
         "fixed_loot": ["godsbane", "dragon_scale", "supreme_health_potion", "gold_coins"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "war_room",
+      "name": "The War Room",
+      "lore_objects": {
+        "strategy table": "A massive table dominates the room, covered with a detailed map of lands that no longer exist. Miniature armies - thousands of tiny figurines - are arranged in formations. One army is painted gold. All others are knocked over, scattered, broken. The gold army stands alone, victorious.",
+        "battle standards": "Captured battle standards line the walls. Each represents a defeated nation. Some are burned, others stained with old blood. Tags identify them: 'KINGDOM OF AETHER - Fell in 3 days.' 'EMPIRE OF THE SUN - Fell in 17 years.' 'HOLY ORDER OF DAWN - Fell in 1 hour.'",
+        "generals chair": "The Warlord's command chair is carved from a single piece of bone - not animal bone. Human spines, fused together. A plaque reads: 'MY MOST TRUSTED ADVISORS.' They advised him poorly, it seems.",
+        "war journals": "Journals of military campaigns fill a shelf. The early entries are tactical, professional. Later entries become disturbing: 'Burned the orphanage today. No strategic value. Just wanted to.' 'Made them watch their families die. The screams help me sleep.'"
+      },
+      "description": "This chamber was the nerve center of the Warlord's campaigns of conquest. A massive oak table dominates the room, its surface covered with detailed maps, battle plans, and thousands of tiny figurines representing armies long since turned to dust.\n\nBattle standards and captured flags hang from the rafters like the trophies of some terrible hunt. Each represents a nation that fell to the Warlord's forces. There are dozens. Hundreds.\n\nThe walls are covered in maps marked with invasion routes, siege diagrams, and body counts. Notes in a cramped hand detail strategies for breaking enemy morale: 'Kill the children first. The parents fight harder, but they break faster.'\n\nA massive throne of fused bone sits at the table's head - the Warlord planned his campaigns from here, moving armies like pieces on a game board. The game was war. He never lost.\n\nSomething still sits in the chair, motionless, waiting...",
+      "short_description": "The Warlord's war room. Maps and battle standards fill this chamber of conquest.",
+      "exits": {
+        "south": "golem_chamber",
+        "east": "portrait_gallery"
+      },
+      "items": ["greater_health_potion"],
+      "enemy_id": "skeletal_general",
+      "chest": {
+        "id": "chest_war_room",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["dwarven_axe", "half_plate", "gold_coins"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "portrait_gallery",
+      "name": "The Portrait Gallery",
+      "lore_objects": {
+        "royal family": "A family portrait shows happier times: a king, a queen, three children. The king's face has been scratched away, replaced with shadow. The queen and children have X marks over their faces. Dates are written below: their death dates.",
+        "changing portrait": "One portrait seems to change when you look away. The young prince becomes older. Becomes darker. The smile becomes a snarl. The eyes become empty pits. You're watching the transformation, captured in paint.",
+        "defaced paintings": "Most paintings have been vandalized - eyes gouged out, faces burned, frames shattered. Only paintings of the Warlord remain intact. He stares from dozens of portraits, every age from infancy to ascension. Each one watches you.",
+        "hidden portrait": "Behind a torn curtain, a painting has been hidden. It shows the Warlord as king, crowned and smiling, surrounded by his court. But someone has painted over it in blood - the same scene, but everyone is dead. The Warlord still smiles."
+      },
+      "description": "A long gallery stretches before you, its walls lined with portraits of the royal family through generations. Gold frames gleam in the torchlight, but the paintings themselves tell a darker story.\n\nThe older portraits show noble kings and graceful queens, painted in classical style. But as you walk deeper, the paintings change. The subjects become gaunt, their eyes haunted. The backgrounds darken from gardens and throne rooms to shadows and flames.\n\nThe final portraits are of the Warlord alone. Dozens of them, each more disturbing than the last. In one, he sits upon a throne of skulls. In another, he stands atop a mountain of corpses. In the largest, he stares directly at you, a smile on his lips that doesn't reach his empty eyes.\n\nYou could swear the paintings' eyes follow you as you walk.\n\nA velvet rope blocks off one section labeled 'THE TRANSFORMATION.' Beyond, you can see a single painting, covered with a black shroud. It pulses with wrongness.",
+      "short_description": "A gallery of royal portraits. The paintings watch you pass.",
+      "exits": {
+        "west": "war_room",
+        "north": "throne_room_approach"
+      },
+      "items": ["gold_coins"],
+      "enemy_id": null,
+      "chest": null,
+      "locked_exits": {}
+    },
+    {
+      "id": "infested_sewers",
+      "name": "The Infested Sewers",
+      "lore_objects": {
+        "carved warning": "Someone carved a message into the sewer wall: 'DON'T FEED THEM. DON'T LET THEM CATCH YOU. DON'T DIE HERE.' Below it, someone else added: 'TOO LATE.'",
+        "nest": "A massive nest of bones, trash, and... other things fills one corner. Hundreds of rats must live here. Or something bigger. Something that needs a lot of food.",
+        "body": "A half-eaten corpse floats face-down in the sewage. The armor suggests a knight. The wounds suggest something with many, many teeth. The body is fresh.",
+        "eyes in darkness": "Dozens of tiny eyes reflect your light from the darkness ahead. They blink. They watch. They wait. And slowly, they begin to move closer..."
+      },
+      "description": "The stench hits you like a physical force - rotting flesh, stagnant water, and something worse. This is the dungeon's sewer system, a network of tunnels designed to carry waste away from the upper levels.\n\nBut something has made this place home.\n\nThe water is thick with floating debris and things you don't want to identify. It comes up to your waist in places, forcing you to wade through the filth. Things brush against your legs beneath the surface - rats? Worse?\n\nThe walls are covered in scratch marks and gnaw marks. Bones float in the water - human bones, picked clean. Whatever lives here is hungry. And there are a lot of them.\n\nA rhythmic squeaking echoes from deeper in the tunnels. Not one sound, but hundreds. Thousands. Moving in your direction.\n\nYou should not have come here.",
+      "short_description": "The dungeon's sewers. Something lives in the filth. Many somethings.",
+      "exits": {
+        "up": "underground_lake"
+      },
+      "items": ["antidote", "antidote"],
+      "enemy_id": "rat_king",
+      "chest": {
+        "id": "chest_sewers",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "uncommon",
+        "fixed_loot": ["venom_blade", "leather_armor", "greater_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "executioners_block",
+      "name": "The Executioner's Block",
+      "lore_objects": {
+        "execution block": "The block is stained black with old blood. Notches are carved into its surface - one for each head that rolled. You count three hundred and twelve notches before you lose track. Before you lose your appetite to continue.",
+        "axe rack": "Multiple axes hang in a row, each larger than the last. The smallest is for children. The label reads: 'MERCY SIZE - QUICK AND PAINLESS.' Even the Warlord's executioner had standards. Terrible, horrifying standards.",
+        "last words book": "A leather-bound book records the last words of every victim. Most are prayers. Pleas. Curses. One entry stands out: 'I forgive you.' The executioner added a note: 'Subject 847. Refused to scream. Unsettling. Increased blade sharpness for future executions. Mercy unnecessary.'",
+        "executioners mask": "A black hood with eye holes hangs from a peg. Inside is a name: 'FATHER.' The executioner passed the job down through generations. A family business."
+      },
+      "description": "You emerge into an open courtyard within the dungeon - a space designed for public executions. A massive stone block sits at the center, stained dark with centuries of blood. Channels are carved into the floor, leading to drains that once carried away the evidence of countless deaths.\n\nAn axe rack lines one wall, holding execution axes of various sizes. Some are massive two-handed weapons. Others are disturbingly small. The Warlord showed no mercy to age.\n\nWooden viewing stands surround the block - the Warlord made his executions into entertainment. Nobles would watch from cushioned seats while common prisoners were beheaded for crimes real and imagined. Often, the 'crime' was simply being in the wrong place at the wrong time.\n\nA headless skeleton is still shackled to the block. Its skull sits nearby, arranged to watch its own body. The Warlord's sense of humor.\n\nThe executioner's ghost stands ready, axe in ethereal hands. Death never truly left this place.",
+      "short_description": "The execution courtyard. The block waits, forever hungry.",
+      "exits": {
+        "east": "prison_cells"
+      },
+      "items": ["greater_health_potion"],
+      "enemy_id": "executioner_ghost",
+      "chest": {
+        "id": "chest_executioner",
+        "state": "trapped",
+        "trap_damage": 25,
+        "loot_tier": "rare",
+        "fixed_loot": ["executioners_sword", "torturer_helm", "supreme_health_potion"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "royal_garden",
+      "name": "The Dead Garden",
+      "lore_objects": {
+        "statue of queen": "A marble statue of the Queen stands among dead roses. Her face is beautiful, serene, carved by a master sculptor who loved his subject. Someone has placed fresh flowers at her feet - impossible, but there they are. They wilt as you watch.",
+        "poisoned fountain": "The fountain still flows, but the water is black and oily. Nothing survives its touch - dead birds surround the basin. Someone poisoned the garden's water supply centuries ago. The poison never faded.",
+        "childrens graves": "Three small graves are hidden behind a rosebush: 'PRINCE ALDRIC. PRINCESS SERA. PRINCESS LUNA.' The children died before their parents. 'At least they didn't see,' someone carved. 'At least they didn't know.'",
+        "pressed flowers": "A book of pressed flowers lies on a bench, preserved by magic. Each page is labeled in a child's handwriting: 'FOR FATHER.' The Warlord kept it. He kept everything from before. Perhaps the monster remembers being human."
+      },
+      "description": "Through a hidden door, you discover what was once a beautiful garden - now a monument to death. Dead trees reach skeletal branches toward a ceiling of stone. Brown vines climb trellises that have collapsed from neglect. Flowers that once bloomed in endless summer are now dry husks.\n\nA fountain in the garden's center once flowed with crystal water. Now it runs with liquid darkness that kills everything it touches. Dead birds and insects ring the basin, frozen in their last moments.\n\nThis was the Queen's private garden, sealed away from the horrors above. But the horror found it anyway. Found it and killed everything within.\n\nStatues of the royal children play in a forever-frozen game of tag. Their stone faces are joyful, innocent. They didn't know what was coming. They never grew old enough to understand.\n\nA bench sits facing the children's graves. The Warlord still visits sometimes. Even monsters mourn.\n\nThe garden is silent. Nothing lives here. Nothing dares.",
+      "short_description": "The Queen's dead garden. Life ended here long ago.",
+      "exits": {
+        "north": "hidden_alcove"
+      },
+      "items": ["regeneration_potion"],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_garden",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["silver_rapier", "arcane_robes", "recall_scroll"],
+        "opened": false
+      },
+      "locked_exits": {},
+      "is_safe": true
+    },
+    {
+      "id": "collapsed_tower",
+      "name": "The Collapsed Tower",
+      "lore_objects": {
+        "telescope": "A massive telescope points upward at a ceiling of rubble. Before the collapse, it pointed at the stars. The astronomer's journal reads: 'The comet returns. The prophecy is true. The king will fall, the monster will rise, and only the marked child can end it.' The journal is three centuries old.",
+        "star charts": "Star charts cover every surface, tracking celestial movements over centuries. One chart is circled in red: 'ALIGNMENT OF DOOM.' The notation reads: 'This is when he transforms. This is when we lose him. This is the beginning of the end.'",
+        "crystal ball": "A cracked crystal ball still glows faintly. When you gaze into it, you see flashes: a crown of thorns, a blade dripping blood, your own face... screaming.",
+        "astronomers skeleton": "The astronomer died at his telescope, still watching the stars. His finger bones point at a constellation you don't recognize. His skull seems to nod when you look away."
+      },
+      "description": "This tower once reached toward the heavens, home to the court astronomer and his predictions. Now it lies in ruins, collapsed by forces unknown, open to a sky it can no longer reach.\n\nBroken telescopes and shattered lenses litter the floor. Star charts flutter in an impossible wind - there is no wind underground. Celestial instruments of bronze and crystal lie in heaps, some still ticking with eternal precision.\n\nThe collapse was not natural. Magical burns score the walls. The astronomer saw something in the stars that the Warlord didn't want known. The tower was destroyed to bury the secret.\n\nBut the ruins still whisper.\n\nThe stars painted on the surviving ceiling fragments glow with their own light. They form a constellation that shouldn't exist - a crown, a sword, a skull. They pulse in sequence, telling a story in a language older than words.\n\nIn the rubble, a skeleton reaches toward a crystal ball that still holds prophecy within...",
+      "short_description": "A collapsed tower of astronomy. The stars still tell their secrets.",
+      "exits": {
+        "down": "ritual_chamber"
+      },
+      "items": ["spell_scroll", "minor_mana_potion"],
+      "enemy_id": null,
+      "chest": {
+        "id": "chest_tower",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["crystal_dagger", "shadow_cloak", "wrath_scroll"],
+        "opened": false
+      },
+      "locked_exits": {}
+    },
+    {
+      "id": "throne_gallery",
+      "name": "The Hall of Conquered Thrones",
+      "lore_objects": {
+        "throne of tears": "This throne is carved from salt, eternally weeping. A plaque reads: 'KING ALDRIC OF MERROW - Wept for three days before his execution. His tears became his monument.'",
+        "iron throne": "A throne of twisted iron, still hot to the touch. 'KING BRENNAN THE BOLD - Forged his own throne into a weapon. Died fighting. Respected. His throne remembers his fury.'",
+        "childs throne": "A tiny throne, sized for a child. The plaque is simple: 'KING MARCUS III - Ruled for one day. Died that night. Age seven.' There are fresh tears on the seat. Yours.",
+        "empty plinth": "One plinth stands empty, a throne-shaped indent in the stone. The plaque reads: 'RESERVED FOR THE WARLORD.' When he falls, his throne will join the others. If he falls."
+      },
+      "description": "A vast hall stretches before you, lined with thrones of every imaginable design. Gold thrones and iron thrones. Wooden thrones and crystal thrones. Thrones of bone and thrones of rose petals preserved by magic.\n\nSeventeen kingdoms fell to the Warlord. Seventeen monarchs died. And he kept their thrones as trophies, arranged in a hall dedicated to his victories.\n\nPlaques before each throne tell brief, terrible stories. How each king or queen fell. What their last words were. How long they begged.\n\nThe hall is silent but not empty. The ghosts of the fallen monarchs linger here, tied to their thrones by the Warlord's dark magic. They cannot speak, cannot act, can only watch as visitor after visitor walks past their monuments to failure.\n\nAt the hall's end, a single empty plinth waits. Its plaque reads simply: 'FOR THE WARLORD - WHEN HE JOINS US.'\n\nThe ghosts seem to watch this plinth with something like hope.",
+      "short_description": "A hall of conquered thrones. Seventeen kingdoms. Seventeen monuments to failure.",
+      "exits": {
+        "south": "ritual_chamber",
+        "north": "boss_lair"
+      },
+      "items": ["gold_coins", "gold_coins"],
+      "enemy_id": "ghost_king",
+      "chest": {
+        "id": "chest_gallery",
+        "state": "unlocked",
+        "trap_damage": 0,
+        "loot_tier": "rare",
+        "fixed_loot": ["holy_shield", "blessed_mace", "supreme_health_potion"],
         "opened": false
       },
       "locked_exits": {}

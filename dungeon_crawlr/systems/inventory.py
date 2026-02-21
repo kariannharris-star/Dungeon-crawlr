@@ -244,6 +244,17 @@ class InventorySystem:
         elif effect_type == 'cure':
             message = f"You used {name} and feel refreshed."
 
+        elif effect_type == 'drink':
+            # Flavor text for drinks - they don't do anything mechanical
+            drink_messages = [
+                f"You drink the {name}. It goes down smooth. Or rough. Either way, it's gone now.",
+                f"You savor the {name}. For a moment, you forget you're about to fight monsters.",
+                f"The {name} warms your belly. Or was that heartburn? Hard to tell.",
+                f"You raise the {name} in a silent toast to fallen adventurers, then drink deep.",
+                f"Ahh, {name}. Just what you needed. Does it help in combat? No. Does it help your mood? Absolutely.",
+            ]
+            message = random.choice(drink_messages)
+
         else:
             message = f"You used {name}."
 

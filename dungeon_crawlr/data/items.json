@@ -1014,6 +1014,95 @@
       "value": 120,
       "weight": 1,
       "stackable": true
+    },
+
+    {
+      "id": "cheap_ale",
+      "name": "Cheap Ale",
+      "description": "A tankard of watered-down ale that tastes like it was brewed in a boot. Still, it takes the edge off after a hard day of dungeon crawling.",
+      "item_type": "consumable",
+      "effect_type": "drink",
+      "effect_value": 0,
+      "value": 2,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "thornwick_bitter",
+      "name": "Thornwick Bitter",
+      "description": "The local brew, dark as a dungeon and twice as bitter. Regulars swear by it. First-timers swear at it.",
+      "item_type": "consumable",
+      "effect_type": "drink",
+      "effect_value": 0,
+      "value": 5,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "dwarven_stout",
+      "name": "Dwarven Stout",
+      "description": "Imported from the mountain kingdoms, this thick black beer could double as lamp oil. One mug and you'll forget your troubles. Two mugs and you'll forget your name.",
+      "item_type": "consumable",
+      "effect_type": "drink",
+      "effect_value": 0,
+      "value": 10,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "elven_wine",
+      "name": "Elven Wine",
+      "description": "A rare vintage from the Silverwood, smooth as silk and sweet as summer rain. The elves say each bottle contains a thousand years of starlight.",
+      "item_type": "consumable",
+      "effect_type": "drink",
+      "effect_value": 0,
+      "value": 25,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "dragons_breath_whiskey",
+      "name": "Dragon's Breath Whiskey",
+      "description": "WARNING: Extremely potent. This amber liquid was allegedly aged in a barrel burned by actual dragon fire. Drinking it may cause fire breath. Side effects include courage, poor decisions, and waking up in strange places.",
+      "item_type": "consumable",
+      "effect_type": "drink",
+      "effect_value": 0,
+      "value": 50,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "mystery_grog",
+      "name": "Mystery Grog",
+      "description": "Old Harken's special recipe. Nobody knows what's in it. Nobody wants to know. But adventurers who drink it before entering the dungeon are statistically more likely to return. Or so Harken claims.",
+      "item_type": "consumable",
+      "effect_type": "drink",
+      "effect_value": 0,
+      "value": 15,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "heros_mead",
+      "name": "Hero's Mead",
+      "description": "A honey-gold mead brewed to an ancient recipe, traditionally served to warriors before battle. It tastes of victory and regret. The last toast of many a fallen adventurer.",
+      "item_type": "consumable",
+      "effect_type": "drink",
+      "effect_value": 0,
+      "value": 20,
+      "weight": 1,
+      "stackable": true
+    },
+    {
+      "id": "hot_meal",
+      "name": "Hot Meal",
+      "description": "A steaming plate of roast meat, root vegetables, and fresh bread. Simple tavern fare, but it warms the soul after the cold darkness of the dungeon.",
+      "item_type": "consumable",
+      "effect_type": "drink",
+      "effect_value": 0,
+      "value": 8,
+      "weight": 1,
+      "stackable": true
     }
   ]
 }

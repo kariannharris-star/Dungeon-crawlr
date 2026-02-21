@@ -18,6 +18,7 @@ from dungeon_crawlr.systems.chest import ChestSystem
 from dungeon_crawlr.systems.save_load import SaveLoadSystem
 from dungeon_crawlr.systems.shop import ShopSystem
 from dungeon_crawlr.systems.fountain import FountainSystem
+from dungeon_crawlr.systems.gambling import GamblingSystem
 
 
 def get_data_path(filename: str) -> str:
@@ -320,7 +321,9 @@ def handle_exploration_command(game_state: GameState, command: str, args: list) 
     elif command == 'shop':
         if ShopSystem.is_in_shop(game_state):
             shop_inv = ShopSystem.get_shop_inventory(game_state)
-            Display.render_shop(shop_inv, game_state.items_data, game_state.player.gold)
+            room_dict = game_state.current_room.to_dict()
+            shop_type = room_dict.get('shop_type', 'general')
+            Display.render_shop(shop_inv, game_state.items_data, game_state.player.gold, shop_type)
         else:
             Display.show_error("There's no shop here.")
         return True
@@ -344,6 +347,52 @@ def handle_exploration_command(game_state: GameState, command: str, args: list) 
             Display.show_warning(f"You engage the {enemy.name} in combat!")
         else:
             Display.show_error("There's nothing to attack here.")
+        return True
+
+    elif command == 'gamble':
+        if not GamblingSystem.is_in_tavern(game_state):
+            Display.show_error("There's no gambling here. Try the tavern.")
+            return True
+        # Show gambling menu
+        Display.show_gambling_menu(game_state.player.gold)
+        return True
+
+    elif command == 'dice':
+        if not GamblingSystem.is_in_tavern(game_state):
+            Display.show_error("There's no gambling here. Try the tavern.")
+            return True
+        if len(args) < 2:
+            Display.show_error("Usage: dice <game> <bet> [choice]")
+            Display.show_info("Games: highlow, skull, glory")
+            Display.show_info("Example: dice highlow 10 high")
+            return True
+
+        game_type = args[0].lower()
+        try:
+            bet = int(args[1])
+        except ValueError:
+            Display.show_error("Bet must be a number.")
+            return True
+
+        if game_type in ['highlow', 'hl', 'high-low']:
+            if len(args) < 3:
+                Display.show_error("For High-Low, specify: dice highlow <bet> <high/low/seven>")
+                return True
+            choice = args[2]
+            won, message = GamblingSystem.play_high_low(game_state, bet, choice)
+        elif game_type in ['skull', 'skulldice', 'skull-dice']:
+            won, message = GamblingSystem.play_skull_dice(game_state, bet)
+        elif game_type in ['glory', 'deathorglory', 'death-or-glory', 'dog']:
+            won, message = GamblingSystem.play_death_or_glory(game_state, bet)
+        else:
+            Display.show_error(f"Unknown game '{game_type}'. Try: highlow, skull, glory")
+            return True
+
+        if won:
+            Display.show_success(message)
+        else:
+            Display.show_warning(message)
+        Display.show_info(f"Your gold: {game_state.player.gold}")
         return True
 
     elif command == '':

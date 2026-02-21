@@ -12,9 +12,21 @@ if TYPE_CHECKING:
 class Display:
     """Handles all game output and formatting."""
 
-    WIDTH = 70
+    WIDTH = 72
     BORDER_CHAR = "="
     USE_COLOR = True
+
+    # Box drawing characters for nicer UI
+    BOX = {
+        'tl': '+',  # top-left
+        'tr': '+',  # top-right
+        'bl': '+',  # bottom-left
+        'br': '+',  # bottom-right
+        'h': '-',   # horizontal
+        'v': '|',   # vertical
+        'lj': '+',  # left junction
+        'rj': '+',  # right junction
+    }
 
     # ANSI color codes
     COLORS = {
@@ -31,6 +43,10 @@ class Display:
         'orange': '\033[38;5;208m',
         'purple': '\033[38;5;129m',
         'gold': '\033[38;5;220m',
+        'dark_red': '\033[38;5;124m',
+        'dark_green': '\033[38;5;22m',
+        'ice_blue': '\033[38;5;117m',
+        'blood_red': '\033[38;5;160m',
     }
 
     @classmethod
@@ -67,6 +83,32 @@ class Display:
         if char is None:
             char = cls.BORDER_CHAR
         return char * cls.WIDTH
+
+    @classmethod
+    def fancy_border(cls, style: str = 'single', color: str = 'cyan') -> str:
+        """Generate a fancy decorative border."""
+        patterns = {
+            'single': cls.BOX['h'] * cls.WIDTH,
+            'double': '=' * cls.WIDTH,
+            'dots': '. ' * (cls.WIDTH // 2),
+            'stars': '* ' * (cls.WIDTH // 2),
+            'wave': '~-' * (cls.WIDTH // 2),
+            'arrow': '>' * cls.WIDTH,
+        }
+        border = patterns.get(style, patterns['single'])
+        return cls.color(border, color)
+
+    @classmethod
+    def header_box(cls, title: str, color: str = 'cyan') -> None:
+        """Print a nice header box with title."""
+        title = f" {title} "
+        padding = (cls.WIDTH - len(title)) // 2
+        top = cls.BOX['tl'] + cls.BOX['h'] * (cls.WIDTH - 2) + cls.BOX['tr']
+        mid = cls.BOX['v'] + ' ' * padding + title + ' ' * (cls.WIDTH - len(title) - padding - 2) + cls.BOX['v']
+        bot = cls.BOX['bl'] + cls.BOX['h'] * (cls.WIDTH - 2) + cls.BOX['br']
+        print(cls.color(top, color))
+        print(cls.color(mid, 'bold'))
+        print(cls.color(bot, color))
 
     @classmethod
     def centered(cls, text: str, width: Optional[int] = None) -> str:
@@ -187,6 +229,8 @@ class Display:
         room_dict = room.to_dict()
         is_shop = room_dict.get('is_shop', False)
         has_fountain = room_dict.get('has_fountain', False)
+        has_gambling = room_dict.get('has_gambling', False)
+        lore_objects = room_dict.get('lore_objects', {})
 
         if enemy and enemy.is_alive():
             print(f"    {cls.color('attack', 'red')}         - Fight the {enemy.name}")
@@ -212,13 +256,22 @@ class Display:
                 print(f"    {cls.color('buy <item>', 'green')}    - Purchase an item")
                 print(f"    {cls.color('sell <item>', 'yellow')}   - Sell an item")
 
+            # Gambling
+            if has_gambling:
+                print(f"    {cls.color('gamble', 'gold')}        - View dice games")
+                print(f"    {cls.color('dice <game> <bet>', 'gold')} - Play dice!")
+
             # Fountain
             if has_fountain:
                 print(f"    {cls.color('drink', 'magenta')}         - Drink from the magical fountain")
 
+            # Lore objects hint
+            if lore_objects:
+                obj_list = ', '.join(list(lore_objects.keys())[:3])
+                print(f"    {cls.color('examine <thing>', 'white')} - Look closer ({obj_list}...)")
+
             # Always available
             print(f"    {cls.color('look', 'white')}          - Examine the room again")
-            print(f"    {cls.color('look <thing>', 'white')}  - Examine something specific")
 
         # Always available
         print()
@@ -440,16 +493,29 @@ class Display:
         print(cls.color(cls.border("-"), 'blue'))
 
     @classmethod
-    def render_shop(cls, shop_inventory: list, items_data: dict, player_gold: int) -> None:
-        """Render shop interface."""
+    def render_shop(cls, shop_inventory: list, items_data: dict, player_gold: int, shop_type: str = "general") -> None:
+        """Render shop interface with themed display."""
         print()
-        print(cls.color(cls.border("$"), 'gold'))
-        print(cls.color(cls.centered("=== SHOP ==="), 'gold'))
-        print(cls.color(cls.border("$"), 'gold'))
+
+        # Theme based on shop type
+        themes = {
+            'weapons': ('gold', 'ARMORY', 'Garret grumbles: "Good steel ain\'t cheap."'),
+            'potions': ('magenta', 'APOTHECARY', 'Miriam smiles: "Everything has a remedy."'),
+            'tavern': ('orange', 'DRINKS & FARE', 'Harken wipes a glass: "What\'ll it be?"'),
+            'general': ('gold', 'SHOP', 'Browse the wares.'),
+        }
+        theme_color, title, flavor = themes.get(shop_type, themes['general'])
+
+        print(cls.color(cls.border("$"), theme_color))
+        print(cls.color(cls.centered(f"=== {title} ==="), theme_color))
+        print(cls.color(cls.border("$"), theme_color))
         print()
-        print(f"  Your Gold: {cls.color(str(player_gold), 'gold')}")
+        print(f"  {cls.color(flavor, 'dim')}")
+        print()
+        print(f"  Your Gold: {cls.color(str(player_gold), 'gold')} coins")
         print()
         print(cls.color("  FOR SALE:", 'bold'))
+        print()
 
         for i, item_id in enumerate(shop_inventory, 1):
             item_data = items_data.get(item_id, {})
@@ -460,32 +526,34 @@ class Display:
             # Can afford?
             affordable = player_gold >= price
             price_color = 'green' if affordable else 'red'
+            afford_mark = cls.color('*', 'green') if affordable else cls.color('x', 'red')
 
             if item_type == 'weapon':
                 damage = item_data.get('damage', 0)
-                print(f"    {i}. {name} - {cls.color(f'{price}g', price_color)} (+{damage} damage)")
+                print(f"  {afford_mark} {i:2}. {cls.color(name, 'yellow'):30} {cls.color(f'{price:4}g', price_color)} (+{damage} dmg)")
             elif item_type == 'armor':
                 defense = item_data.get('defense_bonus', 0)
-                print(f"    {i}. {name} - {cls.color(f'{price}g', price_color)} (+{defense} defense)")
+                print(f"  {afford_mark} {i:2}. {cls.color(name, 'cyan'):30} {cls.color(f'{price:4}g', price_color)} (+{defense} def)")
             elif item_type == 'consumable':
                 effect = item_data.get('effect_type', '')
                 value = item_data.get('effect_value', 0)
                 if effect == 'heal':
-                    print(f"    {i}. {name} - {cls.color(f'{price}g', price_color)} (heals {value} HP)")
+                    print(f"  {afford_mark} {i:2}. {cls.color(name, 'green'):30} {cls.color(f'{price:4}g', price_color)} (+{value} HP)")
                 elif effect == 'damage':
-                    print(f"    {i}. {name} - {cls.color(f'{price}g', price_color)} ({value} magic dmg)")
+                    print(f"  {afford_mark} {i:2}. {cls.color(name, 'magenta'):30} {cls.color(f'{price:4}g', price_color)} ({value} dmg)")
+                elif effect == 'drink':
+                    print(f"  {afford_mark} {i:2}. {cls.color(name, 'orange'):30} {cls.color(f'{price:4}g', price_color)} (drink)")
                 else:
-                    print(f"    {i}. {name} - {cls.color(f'{price}g', price_color)}")
+                    print(f"  {afford_mark} {i:2}. {cls.color(name, 'white'):30} {cls.color(f'{price:4}g', price_color)}")
             else:
-                print(f"    {i}. {name} - {cls.color(f'{price}g', price_color)}")
+                print(f"  {afford_mark} {i:2}. {name:30} {cls.color(f'{price:4}g', price_color)}")
 
         print()
-        print(cls.color("  COMMANDS:", 'dim'))
+        print(cls.color("  " + "-" * (cls.WIDTH - 4), 'dim'))
         print(f"    {cls.color('buy <item>', 'green')}  - Purchase an item")
-        print(f"    {cls.color('sell <item>', 'yellow')} - Sell an item from inventory")
-        print(f"    {cls.color('leave', 'cyan')}        - Leave the shop")
+        print(f"    {cls.color('sell <item>', 'yellow')} - Sell an item (half price)")
         print()
-        print(cls.color(cls.border("$"), 'gold'))
+        print(cls.color(cls.border("$"), theme_color))
 
     @classmethod
     def show_message(cls, message: str, color: str = 'white') -> None:
@@ -580,6 +648,34 @@ class Display:
         print()
         print(cls.color(cls.border(), 'gold'))
         print()
+
+    @classmethod
+    def show_gambling_menu(cls, player_gold: int) -> None:
+        """Display the gambling games menu."""
+        print()
+        print(cls.color(cls.border("*"), 'gold'))
+        print(cls.color(cls.centered("=== DICE GAMES ==="), 'gold'))
+        print(cls.color(cls.border("*"), 'gold'))
+        print()
+        print(f"  Your Gold: {cls.color(str(player_gold), 'gold')}")
+        print()
+        print(cls.color("  AVAILABLE GAMES:", 'bold'))
+        print()
+        print(f"  {cls.color('HIGH-LOW', 'cyan')} - Bet on 2d6 result")
+        print(f"    {cls.color('dice highlow <bet> high', 'dim')} - Win if 8-12 (2x payout)")
+        print(f"    {cls.color('dice highlow <bet> low', 'dim')}  - Win if 2-6  (2x payout)")
+        print(f"    {cls.color('dice highlow <bet> seven', 'dim')}- Win if 7    (4x payout!)")
+        print()
+        print(f"  {cls.color('SKULL DICE', 'magenta')} - Roll 3d6 for matches")
+        print(f"    {cls.color('dice skull <bet>', 'dim')}")
+        print(f"    Pair = 1.5x | Three of a kind = 5x | Triple 6s = {cls.color('10x!', 'gold')}")
+        print()
+        print(f"  {cls.color('DEATH OR GLORY', 'red')} - High risk d20 roll")
+        print(f"    {cls.color('dice glory <bet>', 'dim')}")
+        print(f"    1 = Lose 3x | 2-10 = Lose | 11-19 = Win | 20 = {cls.color('Win 3x!', 'gold')}")
+        print(f"    {cls.color('(Requires 3x bet available)', 'dim')}")
+        print()
+        print(cls.color(cls.border("*"), 'gold'))
 
     @classmethod
     def show_help(cls) -> None:
